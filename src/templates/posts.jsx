@@ -31,9 +31,11 @@ export default function PageTemplate({ data, children }) {
             title={data.mdx.frontmatter.title}
             published="Published 19 February 2019"
           />
-          <MDXProvider components={shortcodes}>
-            {children}
-          </MDXProvider>
+          <article className="prose lg:prose-xl">
+            <MDXProvider components={shortcodes}>
+              {children}
+            </MDXProvider>
+          </article>
         </div>
         <BlogTags
           tags={[
