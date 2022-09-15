@@ -22,3 +22,7 @@
     @apply text-xl italic font-semibold text-gray-900 dark:text-white;
   }
 } */
+
+.gradient {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+};
