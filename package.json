@@ -12,10 +12,13 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "eslint 'src/**/*.{js,jsx}'",
+    "lint:fix": "eslint --fix 'src/**/*.{js,jsx}'"
   },
   "dependencies": {
     "@mdx-js/react": "^2.1.3",
+    "eslint-config-airbnb": "^19.0.4",
     "gatsby": "^4.22.1",
     "gatsby-plugin-image": "^2.22.0",
     "gatsby-plugin-mdx": "^4.1.1",
@@ -24,6 +27,7 @@
     "gatsby-source-filesystem": "^4.22.0",
     "gatsby-transformer-sharp": "^4.22.0",
     "lodash": "^4.17.21",
+    "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },

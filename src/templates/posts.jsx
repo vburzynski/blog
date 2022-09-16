@@ -1,13 +1,13 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
-import { Link } from "gatsby"
-import Layout from "../components/layout";
-import PageDivider from "../components/page-divider";
-import BlogNavigation from "../components/blog-navigation";
-import BlogHeader from "../components/blog-header";
-import BlogAuthor from "../components/blog-author";
-import BlogTags from "../components/blog-tags";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql, Link } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
+import Layout from '../components/layout';
+import PageDivider from '../components/page-divider';
+import BlogNavigation from '../components/blog-navigation';
+import BlogHeader from '../components/blog-header';
+import BlogAuthor from '../components/blog-author';
+import BlogTags from '../components/blog-tags';
 
 const shortcodes = { Link }; // Provide common components here
 
@@ -50,6 +50,21 @@ export default function PageTemplate({ data, children }) {
       </div>
     </Layout>
   );
+}
+
+PageTemplate.propTypes = {
+  data: PropTypes.shape({
+    mdx: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
+  children: PropTypes.node,
+};
+
+PageTemplate.defaultProps = {
+  children: null,
 };
 
 export const query = graphql`
@@ -60,4 +75,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

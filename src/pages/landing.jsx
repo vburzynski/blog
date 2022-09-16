@@ -1,22 +1,30 @@
-import React from "react";
-import Layout from "../components/layout";
-import PageDivider from "../components/page-divider";
-import BlogNavigation from "../components/blog-navigation";
-import BlogHeader from "../components/blog-header";
-import BlogAuthor from "../components/blog-author";
-import BlogTags from "../components/blog-tags";
+import React from 'react';
 
-const IndexPage = () => {
+function IndexPage() {
   return (
     <div className="leading-normal tracking-normal text-white gradient">
-      {/*Nav*/}
+      {/* Nav */}
       <nav id="header" className="fixed w-full z-30 top-0 text-white">
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
           <div className="pl-4 flex items-center">
-            <a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-              {/*Icon from: http://www.potlabicons.com/ */}
-              <svg className="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
-                <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
+            <a
+              className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+              href="/"
+            >
+              {/* Icon from: http://www.potlabicons.com/ */}
+              <svg
+                className="h-8 fill-current inline"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512.005 512.005"
+              >
+                <rect
+                  fill="#2a2a31"
+                  x="16.539"
+                  y="425.626"
+                  width="479.767"
+                  height="50.502"
+                  transform="matrix(1,0,0,1,0,0)"
+                />
                 <path
                   className="plane-take-off"
                   d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
@@ -26,28 +34,52 @@ const IndexPage = () => {
             </a>
           </div>
           <div className="block lg:hidden pr-4">
-            <button id="nav-toggle" className="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-              <svg className="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <button
+              id="nav-toggle"
+              className="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+              type="button"
+            >
+              <svg
+                className="fill-current h-6 w-6"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <title>Menu</title>
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
               </svg>
             </button>
           </div>
-          <div className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <div
+            className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+            id="nav-content"
+          >
             <ul className="list-reset lg:flex justify-end flex-1 items-center">
               <li className="mr-3">
-                <a className="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
+                <a className="inline-block py-2 px-4 text-black font-bold no-underline" href="/">
+                  Active
+                </a>
               </li>
               <li className="mr-3">
-                <a className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">link</a>
+                <a
+                  className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                  href="/"
+                >
+                  link
+                </a>
               </li>
               <li className="mr-3">
-                <a className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">link</a>
+                <a
+                  className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                  href="/"
+                >
+                  link
+                </a>
               </li>
             </ul>
             <button
               id="navAction"
               className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+              type="button"
             >
               Action
             </button>
@@ -55,10 +87,10 @@ const IndexPage = () => {
         </div>
         <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
       </nav>
-      {/*Hero*/}
+      {/* Hero */}
       <div className="pt-24">
         <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-          {/*Left Col*/}
+          {/* Left Col */}
           <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
             <p className="uppercase tracking-loose w-full">What business are you?</p>
             <h1 className="my-4 text-5xl font-bold leading-tight">
@@ -67,31 +99,48 @@ const IndexPage = () => {
             <p className="leading-normal text-2xl mb-8">
               Sub-hero message, not too long and not too short. Make it just right!
             </p>
-            <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <button
+              className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+              type="button"
+            >
               Subscribe
             </button>
           </div>
-          {/*Right Col*/}
+          {/* Right Col */}
           <div className="w-full md:w-3/5 py-6 text-center">
-            <img className="w-full md:w-4/5 z-50" src="hero.png" />
+            <img
+              className="w-full md:w-4/5 z-50"
+              src="hero.png"
+              alt="hero images"
+            />
           </div>
         </div>
       </div>
       <div className="relative -mt-12 lg:-mt-24">
-        <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
-              <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+        <svg
+          viewBox="0 0 1428 174"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+            <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fillRule="nonzero">
+              <path
+                d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                opacity="0.100000001"
+              />
               <path
                 d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
                 opacity="0.100000001"
-              ></path>
-              <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
-            </g>
-            <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+              />
               <path
-                d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
-              ></path>
+                d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                id="Path-4"
+                opacity="0.200000003"
+              />
+            </g>
+            <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fillRule="nonzero">
+              <path d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z" />
             </g>
           </g>
         </svg>
@@ -102,7 +151,7 @@ const IndexPage = () => {
             Title
           </h2>
           <div className="w-full mb-4">
-            <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+            <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
           </div>
           <div className="flex flex-wrap">
             <div className="w-5/6 sm:w-1/2 p-6">
@@ -110,17 +159,22 @@ const IndexPage = () => {
                 Lorem ipsum dolor sit amet
               </h3>
               <p className="text-gray-600 mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc
+                commodo posuere et sit amet ligula.
                 <br />
                 <br />
-
                 Images from:
-
-                <a className="text-pink-500 underline" href="https://undraw.co/">undraw.co</a>
+                <a className="text-pink-500 underline" href="https://undraw.co/">
+                  undraw.co
+                </a>
               </p>
             </div>
             <div className="w-full sm:w-1/2 p-6">
-              <svg className="w-full sm:h-64 mx-auto" viewBox="0 0 1177 598.5" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                className="w-full sm:h-64 mx-auto"
+                viewBox="0 0 1177 598.5"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <title>travel booking</title>
                 <path
                   transform="translate(-11.5 -150.75)"
@@ -133,46 +187,121 @@ const IndexPage = () => {
                   d="M119.9,721.42c-3-5.51.4-12.27,4.29-17.18s8.61-10,8.51-16.29c-.15-9-9.7-14.31-17.33-19.09a84,84,0,0,1-15.56-12.51A22.8,22.8,0,0,1,95,650c-1.58-3.52-1.54-7.52-1.44-11.37q.51-19.26,1.91-38.49"
                   fill="none"
                   stroke="#3f3d56"
-                  stroke-miterlimit="10"
-                  stroke-width="4"
+                  strokeMiterlimit="10"
+                  strokeWidth="4"
                 />
-                <path transform="translate(-11.5 -150.75)" d="M81,599.39a14,14,0,0,1,7-11.5l3.14,6.22-.1-7.53a14.22,14.22,0,0,1,4.63-.56A14,14,0,1,1,81,599.39Z" fill="#57b894" />
-                <path transform="translate(-11.5 -150.75)" d="M106,694.38a14,14,0,1,0-.68-11.3l8.77,7.13L104.46,688A14,14,0,0,0,106,694.38Z" fill="#57b894" />
-                <path transform="translate(-11.5 -150.75)" d="M113,667.13a14,14,0,0,0,4.45-27.53l.08,5.78-3.18-6.29h0a14,14,0,0,0-14.67,13.36,13.84,13.84,0,0,0,.6,4.79A14,14,0,0,0,113,667.13Z" fill="#57b894" />
-                <path transform="translate(-11.5 -150.75)" d="M78.88,644.46a14,14,0,1,0-6.21-26.27l2.48,6.8-5.1-4.9a14,14,0,0,0-4.53,9.69,13.79,13.79,0,0,0,.35,3.87A14,14,0,0,0,78.88,644.46Z" fill="#57b894" />
-                <path transform="translate(-11.5 -150.75)" d="m82.88 603.13c3.24 0.35 6.39 1.36 9.64 1.56s6.82-0.57 8.88-3.1c1.1-1.36 1.66-3.08 2.59-4.57a10 10 0 0 1 3.54 -3.33 14 14 0 1 1 -26.24 9.31q0.79 0 1.59 0.13z" opacity=".1" />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="M81,599.39a14,14,0,0,1,7-11.5l3.14,6.22-.1-7.53a14.22,14.22,0,0,1,4.63-.56A14,14,0,1,1,81,599.39Z"
+                  fill="#57b894"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="M106,694.38a14,14,0,1,0-.68-11.3l8.77,7.13L104.46,688A14,14,0,0,0,106,694.38Z"
+                  fill="#57b894"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="M113,667.13a14,14,0,0,0,4.45-27.53l.08,5.78-3.18-6.29h0a14,14,0,0,0-14.67,13.36,13.84,13.84,0,0,0,.6,4.79A14,14,0,0,0,113,667.13Z"
+                  fill="#57b894"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="M78.88,644.46a14,14,0,1,0-6.21-26.27l2.48,6.8-5.1-4.9a14,14,0,0,0-4.53,9.69,13.79,13.79,0,0,0,.35,3.87A14,14,0,0,0,78.88,644.46Z"
+                  fill="#57b894"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="m82.88 603.13c3.24 0.35 6.39 1.36 9.64 1.56s6.82-0.57 8.88-3.1c1.1-1.36 1.66-3.08 2.59-4.57a10 10 0 0 1 3.54 -3.33 14 14 0 1 1 -26.24 9.31q0.79 0 1.59 0.13z"
+                  opacity=".1"
+                />
                 <path
                   transform="translate(-11.5 -150.75)"
                   d="M78.88,644.46a14,14,0,0,0,13.35-20,10.37,10.37,0,0,0-2.82,2.82c-1,1.51-1.61,3.26-2.78,4.64-2.19,2.57-5.92,3.41-9.31,3.26s-6.66-1.12-10-1.43c-.47,0-.94-.07-1.42-.08A14,14,0,0,0,78.88,644.46Z"
                   opacity=".1"
                 />
-                <path transform="translate(-11.5 -150.75)" d="M113,667.13a14,14,0,0,0,13.46-19.76,11.48,11.48,0,0,0-3,2.85c-1.09,1.54-1.77,3.32-3,4.74-2.37,2.63-6.35,3.56-9.93,3.48s-6.83-.93-10.28-1.2A14,14,0,0,0,113,667.13Z" opacity=".1" />
-                <path transform="translate(-11.5 -150.75)" d="M106,694.38a14,14,0,0,0,25.59-11.45,13.84,13.84,0,0,0-3.08,2.75c-1.34,1.62-2.22,3.47-3.76,5-2.87,2.82-7.5,4-11.63,4.09A60,60,0,0,1,106,694.38Z" opacity=".1" />
-                <path transform="translate(-11.5 -150.75)" d="m141.07 715.07s-11.08-0.34-14.42-2.72-17-5.21-17.86-1.4-16.65 19-4.15 19.06 29.06-1.94 32.4-4 4.03-10.94 4.03-10.94z" fill="#656380" />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="M113,667.13a14,14,0,0,0,13.46-19.76,11.48,11.48,0,0,0-3,2.85c-1.09,1.54-1.77,3.32-3,4.74-2.37,2.63-6.35,3.56-9.93,3.48s-6.83-.93-10.28-1.2A14,14,0,0,0,113,667.13Z"
+                  opacity=".1"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="M106,694.38a14,14,0,0,0,25.59-11.45,13.84,13.84,0,0,0-3.08,2.75c-1.34,1.62-2.22,3.47-3.76,5-2.87,2.82-7.5,4-11.63,4.09A60,60,0,0,1,106,694.38Z"
+                  opacity=".1"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="m141.07 715.07s-11.08-0.34-14.42-2.72-17-5.21-17.86-1.4-16.65 19-4.15 19.06 29.06-1.94 32.4-4 4.03-10.94 4.03-10.94z"
+                  fill="#656380"
+                />
                 <path
                   transform="translate(-11.5 -150.75)"
                   d="m104.42 728.69c12.51 0.1 29.06-2 32.39-4 2.54-1.55 3.55-7.09 3.89-9.65h0.37s-0.7 8.94-4 11-19.89 4.07-32.4 4c-3.61 0-4.85-1.31-4.78-3.21 0.47 1.17 1.84 1.83 4.53 1.86z"
                   opacity=".2"
                 />
                 <rect x="171.5" y="111.25" width="834" height="456" rx="20.42" fill="#f2f2f2" />
-                <path d="m172 133.75h268v434h-247.58a20.42 20.42 0 0 1 -20.42 -20.42v-413.58z" fill="#ff6347" />
-                <path transform="translate(-11.5 -150.75)" d="M1017,282.42V294H183V282.42A20.42,20.42,0,0,1,203.42,262H996.58A20.42,20.42,0,0,1,1017,282.42Z" fill="#3f3d56" />
+                <path
+                  d="m172 133.75h268v434h-247.58a20.42 20.42 0 0 1 -20.42 -20.42v-413.58z"
+                  fill="#ff6347"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="M1017,282.42V294H183V282.42A20.42,20.42,0,0,1,203.42,262H996.58A20.42,20.42,0,0,1,1017,282.42Z"
+                  fill="#3f3d56"
+                />
                 <circle cx="193" cy="127.75" r="6" fill="#ff6347" />
                 <circle cx="208" cy="127.75" r="6" fill="#ff6347" />
                 <circle cx="223" cy="127.75" r="6" fill="#ff6347" />
-                <path transform="translate(-11.5 -150.75)" d="M387.5,490A66.5,66.5,0,1,1,321,423.5,66.47,66.47,0,0,1,387.5,490Z" fill="none" stroke="#f2f2f2" stroke-miterlimit="10" stroke-width="2" />
-                <path transform="translate(-11.5 -150.75)" d="M325.38,467.23l8.3,13,35.53,55.59a66.5,66.5,0,0,1-103.32-8.57l43.54-84.94.91,1.43" fill="none" stroke="#f2f2f2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="M387.5,490A66.5,66.5,0,1,1,321,423.5,66.47,66.47,0,0,1,387.5,490Z"
+                  fill="none"
+                  stroke="#f2f2f2"
+                  strokeMiterlimit="10"
+                  strokeWidth="2"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="M325.38,467.23l8.3,13,35.53,55.59a66.5,66.5,0,0,1-103.32-8.57l43.54-84.94.91,1.43"
+                  fill="none"
+                  stroke="#f2f2f2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                />
                 <path
                   transform="translate(-11.5 -150.75)"
                   d="M385.31,507a66.46,66.46,0,0,1-16.1,28.82l-35.53-55.59,15.69-24.78a.66.66,0,0,1,1.1,0C353.76,460.32,371,486,385.31,507Z"
                   fill="none"
                   stroke="#f2f2f2"
-                  stroke-miterlimit="10"
-                  stroke-width="2"
+                  strokeMiterlimit="10"
+                  strokeWidth="2"
                 />
-                <path transform="translate(-11.5 -150.75)" d="M337.5,452.5a15,15,0,0,1-12.12,14.73l-15-23.51a15,15,0,0,1,27.16,8.78Z" fill="none" stroke="#f2f2f2" stroke-miterlimit="10" stroke-width="2" />
-                <path transform="translate(-11.5 -150.75)" d="m347.5 481.5" fill="none" stroke="#f2f2f2" stroke-miterlimit="10" stroke-width="2" />
-                <path transform="translate(-11.5 -150.75)" d="m333.5 480.5" fill="none" stroke="#f2f2f2" stroke-miterlimit="10" stroke-width="2" />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="M337.5,452.5a15,15,0,0,1-12.12,14.73l-15-23.51a15,15,0,0,1,27.16,8.78Z"
+                  fill="none"
+                  stroke="#f2f2f2"
+                  strokeMiterlimit="10"
+                  strokeWidth="2"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="m347.5 481.5"
+                  fill="none"
+                  stroke="#f2f2f2"
+                  strokeMiterlimit="10"
+                  strokeWidth="2"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="m333.5 480.5"
+                  fill="none"
+                  stroke="#f2f2f2"
+                  strokeMiterlimit="10"
+                  strokeWidth="2"
+                />
                 <path
                   transform="translate(-11.5 -150.75)"
                   d="M563.51,413.13c-.35,0-1.51,0-1.83,0l-6.61.17a.19.19,0,0,1-.17-.09L545,398.42a1.61,1.61,0,0,0-1.37-.75h-2.41c-.57,0-.77.57-.56,1.1l5.09,14.52a.2.2,0,0,1-.18.28l-12.45.18a.81.81,0,0,1-.67-.31l-3.77-4.58a1.59,1.59,0,0,0-1.28-.62h-1.71a.4.4,0,0,0-.38.54l2,7a1.68,1.68,0,0,1,0,1.21l-2,7a.39.39,0,0,0,.38.53h1.7a1.62,1.62,0,0,0,1.28-.62l3.84-4.64a.82.82,0,0,1,.67-.32l12.38.27a.21.21,0,0,1,.18.28L540.65,434c-.21.53,0,1.1.56,1.1h2.41a1.61,1.61,0,0,0,1.37-.76l9.91-14.81a.2.2,0,0,1,.17-.09l6.61.17c.33,0,1.48,0,1.83,0,4.5,0,7.35-1.45,7.35-3.25S568,413.13,563.51,413.13Z"
@@ -188,13 +317,41 @@ const IndexPage = () => {
                   d="M568.69,543.05l-19.23-15.41a2.23,2.23,0,0,0-1.39-.48,2.26,2.26,0,0,0-1.4.48l-8.37,6.81v-4.29a.2.2,0,0,0-.2-.21H532a.2.2,0,0,0-.2.21v9.38l-4.34,3.57a1.41,1.41,0,0,0-.54,1,1.45,1.45,0,0,0,.41,1.09,1.41,1.41,0,0,0,1,.42,1.47,1.47,0,0,0,.9-.31l18.7-15.06a.22.22,0,0,1,.14,0,.24.24,0,0,1,.13,0l18.71,15a1.44,1.44,0,0,0,2.33-1.19,1.45,1.45,0,0,0-.55-1Z"
                   fill="#3f3d56"
                 />
-                <rect x="604" y="260.14" width="347" height="11" rx="1.24" fill="#ff6347" opacity=".3" />
-                <rect x="604" y="392.07" width="347" height="11" rx="1.24" fill="#ff6347" opacity=".3" />
+                <rect
+                  x="604"
+                  y="260.14"
+                  width="347"
+                  height="11"
+                  rx="1.24"
+                  fill="#ff6347"
+                  opacity=".3"
+                />
+                <rect
+                  x="604"
+                  y="392.07"
+                  width="347"
+                  height="11"
+                  rx="1.24"
+                  fill="#ff6347"
+                  opacity=".3"
+                />
                 <rect x="878" y="279.75" width="73" height="25" rx="1.24" fill="#ff6347" />
                 <rect x="878" y="411.75" width="73" height="25" rx="1.24" fill="#ff6347" />
-                <path transform="translate(-11.5 -150.75)" d="m978.18 606.93l-1.73 2s-21.05 2-20.2 5.39 25.35-4.55 25.35-4.55z" fill="#ffc1c7" />
-                <path transform="translate(-11.5 -150.75)" d="m1016.3 605.22s-22.5 8-34.74 4.56l5.69 11.39s29.05-0.86 34.18-6-5.13-9.95-5.13-9.95z" fill="#ff6584" />
-                <path transform="translate(-11.5 -150.75)" d="m1016.3 605.22s-22.5 8-34.74 4.56l5.69 11.39s29.05-0.86 34.18-6-5.13-9.95-5.13-9.95z" opacity=".1" />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="m978.18 606.93l-1.73 2s-21.05 2-20.2 5.39 25.35-4.55 25.35-4.55z"
+                  fill="#ffc1c7"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="m1016.3 605.22s-22.5 8-34.74 4.56l5.69 11.39s29.05-0.86 34.18-6-5.13-9.95-5.13-9.95z"
+                  fill="#ff6584"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="m1016.3 605.22s-22.5 8-34.74 4.56l5.69 11.39s29.05-0.86 34.18-6-5.13-9.95-5.13-9.95z"
+                  opacity=".1"
+                />
                 <circle cx="989.6" cy="378.29" r="15.09" fill="#ffc1c7" />
                 <path
                   transform="translate(-11.5 -150.75)"
@@ -221,7 +378,11 @@ const IndexPage = () => {
                   d="M999.16,721.79a5.79,5.79,0,0,0,5.14,6l134.88,3.33a.41.41,0,0,0,.32-.11h0a.31.31,0,0,0,.11-.2l1.79-8.32a6.38,6.38,0,0,0,.13-1.44l-2.88-60.37a5.65,5.65,0,0,0-.84-2.8l-2-3.36a1.12,1.12,0,0,0-.25-.28,1,1,0,0,0-.61-.2l-127,1.89a5.8,5.8,0,0,0-5.71,5.53Z"
                   fill="#3f3d56"
                 />
-                <path transform="translate(-11.5 -150.75)" d="M1135.53,654.27l4,76.78h0l.11-.2,1.79-8.32a6.38,6.38,0,0,0,.13-1.44l-2.88-60.37a5.65,5.65,0,0,0-.84-2.8l-2-3.36A1.12,1.12,0,0,0,1135.53,654.27Z" opacity=".1" />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="M1135.53,654.27l4,76.78h0l.11-.2,1.79-8.32a6.38,6.38,0,0,0,.13-1.44l-2.88-60.37a5.65,5.65,0,0,0-.84-2.8l-2-3.36A1.12,1.12,0,0,0,1135.53,654.27Z"
+                  opacity=".1"
+                />
                 <path
                   transform="translate(-11.5 -150.75)"
                   d="m1016.2 613.3s26.06-9.79 40.58 11c0 0 3.7 32.18-11.11 33.6s-34.17 1.14-38.73-3.7-33.32-18.51-33.32-18.51-14.32-7.3-17.12 2.19-3.1 11.77-3.1 11.77-14.81 10.82-20.79 12.81c0 0-4 5.7-6.26 5.7s-16.23 3.13-14.81-7.41l23.07-21.07 23.06-22.5s6.55-9.68 23.36-4.56a346.13 346.13 0 0 0 33.89 8.26z"
@@ -237,8 +398,16 @@ const IndexPage = () => {
                   d="m926.06 667s6 13.38-3.7 12.24-17.09-3.13-19.93-3.41-10.49-2.92-9.3-8.19a4.52 4.52 0 0 0 0.08 -1c0-0.71 1-2.09 8.65-1.88 0 0 5.69 0 8-4-0.03-0.01 8.51 10.81 16.2 6.24z"
                   fill="#cbceda"
                 />
-                <path transform="translate(-11.5 -150.75)" d="m990.71 553.1s20.5-12.81 37.59 0 28.48 71.2 28.48 71.2l-39.59-8.83s-1.7-6.83-4-8-2.57-6-2.57-6-12.24-3.7-11.39-17.94-8.52-30.43-8.52-30.43z" fill="#ff6584" />
-                <path transform="translate(-11.5 -150.75)" d="m1001.2 553.67h-10.54s-6.27 7.12-7.12 25.06l-3.42 14.27s-7.12 17.09-2.85 19.94 12.54 2.56 14.24-3.13 13.44-38.76 13.44-38.76z" fill="#ff6584" />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="m990.71 553.1s20.5-12.81 37.59 0 28.48 71.2 28.48 71.2l-39.59-8.83s-1.7-6.83-4-8-2.57-6-2.57-6-12.24-3.7-11.39-17.94-8.52-30.43-8.52-30.43z"
+                  fill="#ff6584"
+                />
+                <path
+                  transform="translate(-11.5 -150.75)"
+                  d="m1001.2 553.67h-10.54s-6.27 7.12-7.12 25.06l-3.42 14.27s-7.12 17.09-2.85 19.94 12.54 2.56 14.24-3.13 13.44-38.76 13.44-38.76z"
+                  fill="#ff6584"
+                />
                 <path
                   transform="translate(-11.5 -150.75)"
                   d="M998.23,509.4A15.27,15.27,0,0,1,1014,512c5.47,4.88,6.57,12.85,8,20s4.17,15.21,11,18a28.35,28.35,0,0,1-9.19-.27l10.25,9.19-17.27-5.63c-5.42-1.77-11.11-3.56-16.72-2.56-9.3,1.65-15.78,10.4-24.71,13.47l1-4.85-6,0a11.75,11.75,0,0,0,3.43-4,3.27,3.27,0,0,0-2.29-1.2c-2.5-15.59,6.76-31,18.81-41.17,2.38-2,5-3.92,8.06-4.42s6.64.87,7.71,3.78"
@@ -249,7 +418,11 @@ const IndexPage = () => {
           </div>
           <div className="flex flex-wrap flex-col-reverse sm:flex-row">
             <div className="w-full sm:w-1/2 p-6 mt-6">
-              <svg className="w-5/6 sm:h-64 mx-auto" viewBox="0 0 1176.60617 873.97852" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                className="w-5/6 sm:h-64 mx-auto"
+                viewBox="0 0 1176.60617 873.97852"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <title>connected world</title>
                 <path
                   transform="translate(-11.697 -13.011)"
@@ -266,7 +439,11 @@ const IndexPage = () => {
                   d="m290.24 229.05a12.656 12.656 0 0 0 -13.902 4.1635c-0.64354 0.84733-1.184 2.0154-0.64526 2.9329 0.77242 1.3154 2.7405 0.79583 4.1916 0.3253a10.549 10.549 0 0 1 6.6207 -0.15794c1.3625 0.4678 2.5815 1.2946 3.9499 1.7447a3.9778 3.9778 0 0 0 4.0557 -0.59267c0.93918-0.95786 0.99811-2.447 0.99977-3.7885a3.0468 3.0468 0 0 0 -0.7764 -2.5042 3.9808 3.9808 0 0 0 -1.7955 -0.53108 6.1845 6.1845 0 0 1 -3.6195 -2.1148"
                   fill="#3f3d56"
                 />
-                <path transform="translate(-11.697 -13.011)" d="m304.34 225.13a3.2196 3.2196 0 0 0 -3.1118 4.5344 13.05 13.05 0 0 0 5.203 0.33925 4.4472 4.4472 0 0 0 3.6367 -3.3342 8.3721 8.3721 0 0 1 -5.9279 -1.1321" fill="#3f3d56" />
+                <path
+                  transform="translate(-11.697 -13.011)"
+                  d="m304.34 225.13a3.2196 3.2196 0 0 0 -3.1118 4.5344 13.05 13.05 0 0 0 5.203 0.33925 4.4472 4.4472 0 0 0 3.6367 -3.3342 8.3721 8.3721 0 0 1 -5.9279 -1.1321"
+                  fill="#3f3d56"
+                />
                 <path
                   transform="translate(-11.697 -13.011)"
                   d="m351.62 218.57a59.853 59.853 0 0 0 -13.342 4.5323 10.024 10.024 0 0 1 6.4025 10.068 5.2431 5.2431 0 0 0 0.06075 2.4894c0.49 1.1879 1.9099 1.6337 3.1582 1.9386a20.823 20.823 0 0 0 6.927 0.88415 7.0564 7.0564 0 0 0 5.7338 -3.5038 24.972 24.972 0 0 1 1.1924 -2.8186c2.9922-4.557 11.881 0.9531 15.094-3.4513 1.1317-1.5515 1.0282-3.887 2.5034-5.1164a5.6241 5.6241 0 0 1 2.5735 -0.98213 180.73 180.73 0 0 1 19.548 -2.7841c3.1092-0.27057 7.1619-1.387 7.1878-4.5078a54.149 54.149 0 0 0 -34.541 4.6467c-3.8504 1.9286-8.943 5.9853-12.652 3.4285-1.3887-0.95731-1.3199-3.5351-3.2313-4.6116-1.9541-1.1006-4.5408-0.65294-6.6151-0.21223z"
@@ -378,8 +555,8 @@ const IndexPage = () => {
                   fill="none"
                   opacity=".8"
                   stroke="#ff6347"
-                  stroke-miterlimit="10"
-                  stroke-width="2"
+                  strokeMiterlimit="10"
+                  strokeWidth="2"
                 />
                 <path
                   transform="translate(-11.697 -13.011)"
@@ -387,8 +564,8 @@ const IndexPage = () => {
                   fill="none"
                   opacity=".8"
                   stroke="#ff6347"
-                  stroke-miterlimit="10"
-                  stroke-width="2"
+                  strokeMiterlimit="10"
+                  strokeWidth="2"
                 />
                 <circle cx="214.07" cy="310.65" r="11.968" fill="#ff6347" />
                 <circle cx="322.2" cy="566.52" r="11.968" fill="#ff6347" />
@@ -403,12 +580,14 @@ const IndexPage = () => {
                   Lorem ipsum dolor sit amet
                 </h3>
                 <p className="text-gray-600 mb-8">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc
+                  commodo posuere et sit amet ligula.
                   <br />
                   <br />
                   Images from:
-
-                  <a className="text-pink-500 underline" href="https://undraw.co/">undraw.co</a>
+                  <a className="text-pink-500 underline" href="https://undraw.co/">
+                    undraw.co
+                  </a>
                 </p>
               </div>
             </div>
@@ -421,25 +600,24 @@ const IndexPage = () => {
             Title
           </h2>
           <div className="w-full mb-4">
-            <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+            <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
           </div>
           <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
             <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-              <a href="#" className="flex flex-wrap no-underline hover:no-underline">
-                <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                  xGETTING STARTED
-                </p>
+              <a href="/" className="flex flex-wrap no-underline hover:no-underline">
+                <p className="w-full text-gray-600 text-xs md:text-sm px-6">xGETTING STARTED</p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6">
                   Lorem ipsum dolor sit amet.
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc
+                  commodo posuere et sit amet ligula.
                 </p>
               </a>
             </div>
             <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
               <div className="flex items-center justify-start">
-                <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                <button type="button" className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                   Action
                 </button>
               </div>
@@ -447,21 +625,20 @@ const IndexPage = () => {
           </div>
           <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
             <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-              <a href="#" className="flex flex-wrap no-underline hover:no-underline">
-                <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                  xGETTING STARTED
-                </p>
+              <a href="/" className="flex flex-wrap no-underline hover:no-underline">
+                <p className="w-full text-gray-600 text-xs md:text-sm px-6">xGETTING STARTED</p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6">
                   Lorem ipsum dolor sit amet.
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc
+                  commodo posuere et sit amet ligula.
                 </p>
               </a>
             </div>
             <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
               <div className="flex items-center justify-center">
-                <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                <button type="button" className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                   Action
                 </button>
               </div>
@@ -469,21 +646,20 @@ const IndexPage = () => {
           </div>
           <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
             <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-              <a href="#" className="flex flex-wrap no-underline hover:no-underline">
-                <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                  xGETTING STARTED
-                </p>
+              <a href="/" className="flex flex-wrap no-underline hover:no-underline">
+                <p className="w-full text-gray-600 text-xs md:text-sm px-6">xGETTING STARTED</p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6">
                   Lorem ipsum dolor sit amet.
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc
+                  commodo posuere et sit amet ligula.
                 </p>
               </a>
             </div>
             <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
               <div className="flex items-center justify-end">
-                <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                <button type="button" className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                   Action
                 </button>
               </div>
@@ -497,14 +673,12 @@ const IndexPage = () => {
             Pricing
           </h2>
           <div className="w-full mb-4">
-            <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+            <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
           </div>
           <div className="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
             <div className="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
               <div className="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-                <div className="p-8 text-3xl font-bold text-center border-b-4">
-                  Free
-                </div>
+                <div className="p-8 text-3xl font-bold text-center border-b-4">Free</div>
                 <ul className="w-full text-center text-sm">
                   <li className="border-b py-4">Thing</li>
                   <li className="border-b py-4">Thing</li>
@@ -517,7 +691,7 @@ const IndexPage = () => {
                   <span className="text-base">for one user</span>
                 </div>
                 <div className="flex items-center justify-center">
-                  <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  <button type="button" className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     Sign Up
                   </button>
                 </div>
@@ -526,7 +700,7 @@ const IndexPage = () => {
             <div className="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
               <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
                 <div className="w-full p-8 text-3xl font-bold text-center">Basic</div>
-                <div className="h-1 w-full gradient my-0 py-0 rounded-t"></div>
+                <div className="h-1 w-full gradient my-0 py-0 rounded-t" />
                 <ul className="w-full text-center text-base font-bold">
                   <li className="border-b py-4">Thing</li>
                   <li className="border-b py-4">Thing</li>
@@ -540,7 +714,7 @@ const IndexPage = () => {
                   <span className="text-base">/ per user</span>
                 </div>
                 <div className="flex items-center justify-center">
-                  <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  <button type="button" className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     Sign Up
                   </button>
                 </div>
@@ -548,9 +722,7 @@ const IndexPage = () => {
             </div>
             <div className="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
               <div className="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-                <div className="p-8 text-3xl font-bold text-center border-b-4">
-                  Pro
-                </div>
+                <div className="p-8 text-3xl font-bold text-center border-b-4">Pro</div>
                 <ul className="w-full text-center text-sm">
                   <li className="border-b py-4">Thing</li>
                   <li className="border-b py-4">Thing</li>
@@ -563,7 +735,7 @@ const IndexPage = () => {
                   <span className="text-base">/ per user</span>
                 </div>
                 <div className="flex items-center justify-center">
-                  <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  <button type="button" className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     Sign Up
                   </button>
                 </div>
@@ -573,22 +745,32 @@ const IndexPage = () => {
         </div>
       </section>
       {/* Change the colour #f8fafc to match the previous section colour */}
-      <svg className="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+      <svg
+        className="wave-top"
+        viewBox="0 0 1439 147"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g transform="translate(-1.000000, -14.000000)" fillRule="nonzero">
             <g className="wave" fill="#f8fafc">
-              <path
-                d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
-              ></path>
+              <path d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z" />
             </g>
             <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
               <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
-                <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+                <path
+                  d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                  opacity="0.100000001"
+                />
                 <path
                   d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
                   opacity="0.100000001"
-                ></path>
-                <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>
+                />
+                <path
+                  d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                  opacity="0.200000003"
+                />
               </g>
             </g>
           </g>
@@ -599,24 +781,36 @@ const IndexPage = () => {
           Call to Action
         </h2>
         <div className="w-full mb-4">
-          <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+          <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t" />
         </div>
-        <h3 className="my-4 text-3xl leading-tight">
-          Main Hero Message to sell yourself!
-        </h3>
-        <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        <h3 className="my-4 text-3xl leading-tight">Main Hero Message to sell yourself!</h3>
+        <button type="button" className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
           Action!
         </button>
       </section>
-      {/*Footer*/}
+      {/* Footer */}
       <footer className="bg-white">
         <div className="container mx-auto px-8">
           <div className="w-full flex flex-col md:flex-row py-6">
             <div className="flex-1 mb-6 text-black">
-              <a className="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-                {/*Icon from: http://www.potlabicons.com/ */}
-                <svg className="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
-                  <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
+              <a
+                className="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+                href="/"
+              >
+                {/* Icon from: http://www.potlabicons.com/ */}
+                <svg
+                  className="h-8 fill-current inline"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512.005 512.005"
+                >
+                  <rect
+                    fill="#2a2a31"
+                    x="16.539"
+                    y="425.626"
+                    width="479.767"
+                    height="50.502"
+                    transform="matrix(1,0,0,1,0,0)"
+                  />
                   <path
                     className="plane-take-off"
                     d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
@@ -629,13 +823,28 @@ const IndexPage = () => {
               <p className="uppercase text-gray-500 md:mb-6">Links</p>
               <ul className="list-reset mb-6">
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+                  <a
+                    href="/"
+                    className="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >
+                    FAQ
+                  </a>
                 </li>
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+                  <a
+                    href="/"
+                    className="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >
+                    Help
+                  </a>
                 </li>
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+                  <a
+                    href="/"
+                    className="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >
+                    Support
+                  </a>
                 </li>
               </ul>
             </div>
@@ -643,10 +852,20 @@ const IndexPage = () => {
               <p className="uppercase text-gray-500 md:mb-6">Legal</p>
               <ul className="list-reset mb-6">
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+                  <a
+                    href="/"
+                    className="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >
+                    Terms
+                  </a>
                 </li>
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+                  <a
+                    href="/"
+                    className="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >
+                    Privacy
+                  </a>
                 </li>
               </ul>
             </div>
@@ -654,13 +873,28 @@ const IndexPage = () => {
               <p className="uppercase text-gray-500 md:mb-6">Social</p>
               <ul className="list-reset mb-6">
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+                  <a
+                    href="/"
+                    className="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >
+                    Facebook
+                  </a>
                 </li>
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+                  <a
+                    href="/"
+                    className="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >
+                    Linkedin
+                  </a>
                 </li>
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+                  <a
+                    href="/"
+                    className="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >
+                    Twitter
+                  </a>
                 </li>
               </ul>
             </div>
@@ -668,22 +902,39 @@ const IndexPage = () => {
               <p className="uppercase text-gray-500 md:mb-6">Company</p>
               <ul className="list-reset mb-6">
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+                  <a
+                    href="/"
+                    className="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >
+                    Official Blog
+                  </a>
                 </li>
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+                  <a
+                    href="/"
+                    className="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >
+                    About Us
+                  </a>
                 </li>
                 <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                  <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+                  <a
+                    href="/"
+                    className="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >
+                    Contact
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <a href="https://www.freepik.com/free-photos-vectors/background" className="text-gray-500">Background vector created by freepik - www.freepik.com</a>
+        <a href="https://www.freepik.com/free-photos-vectors/background" className="text-gray-500">
+          Background vector created by freepik - www.freepik.com
+        </a>
       </footer>
     </div>
-  )
+  );
 }
 
 export default IndexPage;
