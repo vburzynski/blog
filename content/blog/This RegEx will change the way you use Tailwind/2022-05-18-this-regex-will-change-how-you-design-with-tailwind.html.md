@@ -1,9 +1,8 @@
 ---
 title: This RegEx Will Change How You Design With Tailwind
-author: valerie_burzynski
+date: 2022-05-18
 layout: article
 category: Development
-photo: jpg
 tags:
   - TailwindCSS
   - Stylesheets

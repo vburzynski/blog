@@ -1,122 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import PageDivider from '../components/page-divider';
+import BlogNavigation from '../components/blog-navigation';
+import BlogHeader from '../components/blog-header';
+import BlogAuthor from '../components/blog-author';
+import BlogTags from '../components/blog-tags';
 
-const progressStyle = {
-  background: 'linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0)',
-};
-
-function IndexPage() {
-  const [isHeaderFixed, setIsHeaderFixed] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const progressBarHandler = () => {
-      const totalScroll = document.documentElement.scrollTop;
-      const { scrollHeight, clientHeight } = document.documentElement;
-      const windowHeight = scrollHeight - clientHeight;
-      const scroll = (totalScroll / windowHeight) * 100;
-      const progress = document.querySelector('#progress');
-      progress.style.setProperty('--scroll', `${scroll}%`);
-      setIsHeaderFixed(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', progressBarHandler);
-    window.addEventListener('resize', progressBarHandler);
-    return () => {
-      window.removeEventListener('scroll', progressBarHandler);
-      window.removeEventListener('resize', progressBarHandler);
-    };
-  }, []);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
+function BlogPage({ data }) {
   return (
-    <div className="bg-gray-100 font-sans leading-normal tracking-normal">
-      <nav id="header" className={`fixed w-full z-10 top-0 ${isHeaderFixed && 'bg-white shadow'}`}>
-        <div id="progress" className="h-1 z-20 top-0 bg-green-500" style={progressStyle} />
-        <div className="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
-          <div className="pl-4">
-            <a
-              className="text-gray-900 no-underline hover:no-underline font-extrabold text-xl"
-              href="/"
-            >
-              Minimal Blog
-            </a>
-          </div>
-
-          {/* Menu Button */}
-          <div className="block lg:hidden pr-4">
-            <button
-              id="nav-toggle"
-              className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none"
-              onClick={toggleMenu}
-              type="button"
-            >
-              <svg
-                className="fill-current h-3 w-3"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Menu Content */}
-          <div
-            id="nav-content"
-            className={`w-full flex-grow lg:flex lg:items-center lg:w-auto ${
-              !menuOpen && 'hidden'
-            } lg:block mt-2 lg:mt-0 ${
-              isHeaderFixed ? 'bg-white' : 'bg-gray-100'
-            } lg:bg-transparent z-20`}
-          >
-            <ul className="list-reset lg:flex justify-end flex-1 items-center">
-              <li className="mr-3">
-                <a
-                  className="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
-                  href="/"
-                >
-                  Home
-                </a>
-              </li>
-              <li className="mr-3">
-                <a
-                  className="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
-                  href="/blog"
-                >
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      {/* Container */}
+    <Layout section="blog">
+      {
+        data.allMdx.nodes.map((node) => (
+          <article key={node.id}>
+            <h2>{node.fields.title}</h2>
+            <p>
+              Posted:
+              {' '}
+              {node.fields.date}
+            </p>
+          </article>
+        ))
+      }
       <div className="container w-full md:max-w-3xl mx-auto pt-20">
         <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
-          {/* Title */}
-          <div className="font-sans">
-            <p className="text-base md:text-sm text-green-500 font-bold">
-              &lt;
-              <a
-                href="/"
-                className="text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
-              >
-                BACK TO BLOG
-              </a>
-            </p>
-            <h1 className="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">
-              Welcome to Minimal Blog
-            </h1>
-            <p className="text-sm md:text-base font-normal text-gray-600">
-              Published 19 February 2019
-            </p>
-          </div>
-          {/* Post Content */}
-          {/* Lead Para */}
+          <BlogHeader title="Welcome to Minimal Blog" published="Published 19 February 2019" />
+
           <p className="py-6">
             👋 Welcome fellow
             {' '}
@@ -183,158 +92,39 @@ function IndexPage() {
             Example of blockquote - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
             at ipsum eu nunc commodo posuere et sit amet ligula.
           </blockquote>
-
-          {/* <p className="py-6">Example code block:</p>
-          <pre className="bg-gray-900 rounded text-white font-mono text-base p-2 md:p-4">
-            <code className="break-words whitespace-pre-wrap">
-    &lt;header className="site-header outer"&gt;
-    &lt;div className="inner"&gt;
-    {{&gt; "site-nav"}}
-    &lt;/div&gt;
-    &lt;/header&gt;
-            </code>
-          </pre> */}
-
-          {/* / Post Content */}
         </div>
 
-        {/* Tags  */}
-        <div className="text-base md:text-sm text-gray-500 px-4 py-6">
-          Tags:
-          {' '}
-          <a href="/" className="text-base md:text-sm text-green-500 no-underline hover:underline">
-            Link
-          </a>
-          {' '}
-          .
-          {' '}
-          <a href="/" className="text-base md:text-sm text-green-500 no-underline hover:underline">
-            Link
-          </a>
-        </div>
-
-        {/* Divider */}
-        <hr className="border-b-2 border-gray-400 mb-8 mx-4" />
-
-        {/* Author */}
-        <div className="flex w-full items-center font-sans px-4 py-12">
-          <img
-            className="w-10 h-10 rounded-full mr-4"
-            src="http://i.pravatar.cc/300"
-            alt="Avatar of Author"
-          />
-          <div className="flex-1 px-2">
-            <p className="font-bold text-base md:text-xl leading-none mb-2">
-              Jo Bloggerson
-            </p>
-            <p className="text-gray-600 text-xs md:text-base">
-              Minimal Blog Tailwind CSS template by
-              <a
-                className="text-green-500 no-underline hover:underline"
-                href="https://www.tailwindtoolbox.com"
-              >
-                TailwindToolbox.com
-              </a>
-            </p>
-          </div>
-          <div className="justify-end">
-            <button
-              type="button"
-              className="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full"
-            >
-              Read More
-            </button>
-          </div>
-        </div>
-        {/* /Author */}
-
-        {/* Divider */}
-        <hr className="border-b-2 border-gray-400 mb-8 mx-4" />
-
-        {/* Next & Prev Links */}
-        <div className="font-sans flex justify-between content-center px-4 pb-12">
-          <div className="text-left">
-            <span className="text-xs md:text-sm font-normal text-gray-600">&lt; Previous Post</span>
-            <br />
-            <p>
-              <a
-                href="/"
-                className="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
-              >
-                Blog title
-              </a>
-            </p>
-          </div>
-          <div className="text-right">
-            <span className="text-xs md:text-sm font-normal text-gray-600">Next Post &gt;</span>
-            <br />
-            <p>
-              <a
-                href="/"
-                className="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline"
-              >
-                Blog title
-              </a>
-            </p>
-          </div>
-        </div>
-        {/* /Next & Prev Links */}
+        <BlogTags
+          tags={[
+            { name: 'tag-a', href: '#' },
+            { name: 'tag-b', href: '#' },
+          ]}
+        />
+        <PageDivider />
+        <BlogAuthor />
+        <PageDivider />
+        <BlogNavigation />
       </div>
-      {/* /container */}
-
-      <footer className="bg-white border-t border-gray-400 shadow">
-        <div className="container max-w-4xl mx-auto flex py-8">
-          <div className="w-full mx-auto flex flex-wrap">
-            <div className="flex w-full md:w-1/2 ">
-              <div className="px-8">
-                <h3 className="font-bold text-gray-900">About</h3>
-                <p className="py-4 text-gray-600 text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis
-                  tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex w-full md:w-1/2">
-              <div className="px-8">
-                <h3 className="font-bold text-gray-900">Social</h3>
-                <ul className="list-reset items-center text-sm pt-3">
-                  <li>
-                    <a
-                      className="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-                      href="/"
-                    >
-                      Add social link
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-                      href="/"
-                    >
-                      Add social link
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1"
-                      href="/"
-                    >
-                      Add social link
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </Layout>
   );
 }
 
-export default IndexPage;
+export default BlogPage;
 
 export function Head() {
   return <title>Home Page</title>;
 }
+
+export const query = graphql`
+  query {
+    allMdx {
+      nodes {
+        fields {
+          title
+        }
+        id
+        excerpt
+      }
+    }
+  }
+`;
