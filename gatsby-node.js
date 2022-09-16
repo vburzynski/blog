@@ -50,12 +50,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   result.data.allMdx.nodes.forEach((node) => {
-    console.log(node.internal.type);
-    console.log(JSON.stringify(node, null, 2));
     createPage({
       // As mentioned above you could also query something else like frontmatter.title above and
       // use a helper function like slugify to create a slug
-      path: node.fields.slug,
+      path: `/blog/${node.fields.slug}`,
       // path to the MDX content file so webpack can pick it up and transform it into JSX
       // component: node.internal.contentFilePath,
       component: `${postTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
@@ -66,34 +64,34 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   });
 };
 
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions;
-  const typeDefs = `
-    type Mdx implements Node @dontInfer {
-      frontmatter: Frontmatter
-      fields: Fields
-    }
-    type Frontmatter {
-      title: String
-      date: Date
-      tags: [String]
-      category: String
-      publish: Boolean
-      featured: Boolean
-      socialImage: File @fileByRelativePath
-      stage: String
-      slug: String
-    }
-    type Fields {
-      title: String!
-      slug: String!
-      date: Date!
-      tagSlugs: [String]
-      categorySlug: String
-      category: String
-      stage: String
-    }
-  `;
+// exports.createSchemaCustomization = ({ actions }) => {
+//   const { createTypes } = actions;
+//   const typeDefs = `
+//     type Mdx implements Node @dontInfer {
+//       frontmatter: Frontmatter
+//       fields: Fields
+//     }
+//     type Frontmatter {
+//       title: String
+//       date: Date
+//       tags: [String]
+//       category: String
+//       publish: Boolean
+//       featured: Boolean
+//       socialImage: File @fileByRelativePath
+//       stage: String
+//       slug: String
+//     }
+//     type Fields {
+//       title: String!
+//       slug: String!
+//       date: Date!
+//       tagSlugs: [String]
+//       categorySlug: String
+//       category: String
+//       stage: String
+//     }
+//   `;
 
-  createTypes(typeDefs);
-};
+//   createTypes(typeDefs);
+// };

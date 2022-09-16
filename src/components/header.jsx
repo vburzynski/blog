@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { StaticImage } from 'gatsby-plugin-image';
 import Navigation from './navigation';
 
 const progressStyle = {
@@ -39,7 +40,16 @@ function Header({ section }) {
         style={progressStyle}
       />
       <div className="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
-        <div className="pl-4">
+        <div className="flex pl-4">
+          <StaticImage
+            className="w-10 h-10 rounded-full mr-2"
+            src="../images/profile.jpg"
+            alt="Avatar of Valerie Burzynski"
+            placeholder="blurred"
+            layout="fixed"
+            width={30}
+            height={30}
+          />
           <a className="text-gray-900 no-underline hover:no-underline font-extrabold text-xl" href="/">
             Valerie Burzynski
           </a>

@@ -5,9 +5,9 @@ import Header from './header';
 
 function Layout({ section, children }) {
   return (
-    <div className="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div className="bg-gray-100 font-sans leading-normal tracking-normal min-h-screen flex flex-col">
       <Header section={section} />
-      {children}
+      <div className="grow">{children}</div>
       <Footer />
     </div>
   );

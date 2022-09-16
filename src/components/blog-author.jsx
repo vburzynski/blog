@@ -1,15 +1,21 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 function BlogAuthor() {
   return (
     <div className="flex w-full items-center font-sans px-4 py-12">
-      <img className="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author" />
+      <StaticImage
+        className="w-10 h-10 rounded-full mr-4"
+        src="../images/profile.jpg"
+        alt="Avatar of Valerie Burzynski"
+        placeholder="blurred"
+        layout="fixed"
+        width={50}
+        height={50}
+      />
       <div className="flex-1 px-2">
-        <p className="font-bold text-base md:text-xl leading-none mb-2">Jo Bloggerson</p>
-        <p className="text-gray-600 text-xs md:text-base">
-          Minimal Blog Tailwind CSS template by
-          <a className="text-green-500 no-underline hover:underline" href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a>
-        </p>
+        <p className="font-bold text-base md:text-xl leading-none mb-2">Valerie Burzynski</p>
+        <p className="text-gray-600 text-xs md:text-base">Software Developer</p>
       </div>
       <div className="justify-end">
         <button
