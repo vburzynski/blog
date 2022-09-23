@@ -12,6 +12,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 720,
+            },
+          },
+          {
             resolve: 'gatsby-remark-prismjs',
             options: {
               // Class prefix for <pre> tags containing syntax highlighting;
@@ -76,6 +82,7 @@ module.exports = {
               escapeEntities: {},
             },
           },
+          'gatsby-remark-copy-linked-files',
         ],
       },
     },

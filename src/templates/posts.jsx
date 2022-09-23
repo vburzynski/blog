@@ -39,7 +39,10 @@ export default function PageTemplate({
         </div>
         <BlogTags tags={post.frontmatter.tags} />
         <PageDivider />
-        <BlogNavigation />
+        <BlogNavigation
+          previous={previous}
+          next={next}
+        />
       </div>
     </Layout>
   );

@@ -47,26 +47,26 @@ Currently only the first version of WSL can be installed in retail builds of Win
 [Configure your computer for Slow builds](https://insider.windows.com/en-us/getting-started/)
 
 1. Go  to Settings > Update & Security > Windows Insider Program.
-   ![Windows Update & Security](/assets/images/blog/extra/2020-05-21-002-settings.png "Windows Update & Security")
-   ![Windows Settings Screen](/assets/images/blog/extra/2020-05-21-001-windows-settings.png "Windows Settings Screen")
-   ![Windows Update & Security](/assets/images/blog/extra/2020-05-21-004-windows-insider-program.png "Windows Update & Security")
+   ![Windows Update & Security](./2020-05-21-002-settings.png "Windows Update & Security")
+   ![Windows Settings Screen](./2020-05-21-001-windows-settings.png "Windows Settings Screen")
+   ![Windows Update & Security](./2020-05-21-004-windows-insider-program.png "Windows Update & Security")
 
 1. Click Get Started and link the account that you used to register as a Windows Insider.
-   ![Windows Insider Setup -- Get Ready](/assets/images/blog/extra/2020-05-21-006-windows-insider-get-started.png "Windows Insider Setup -- Get Ready Button")
-   ![Windows Insider Setup -- Link Account](/assets/images/blog/extra/2020-05-21-007-pick-account.png "Windows Insider Setup -- Link Account")
+   ![Windows Insider Setup -- Get Ready](./2020-05-21-006-windows-insider-get-started.png "Windows Insider Setup -- Get Ready Button")
+   ![Windows Insider Setup -- Link Account](./2020-05-21-007-pick-account.png "Windows Insider Setup -- Link Account")
 
 1. Select the type of preview builds you wish to install (Slow releases for our purposes).
-   ![Windows Insider Setup -- Build Selection](/assets/images/blog/extra/2020-05-21-008-pick-insider-settings.png "Windows Insider Setup -- Build Selection")
+   ![Windows Insider Setup -- Build Selection](./2020-05-21-008-pick-insider-settings.png "Windows Insider Setup -- Build Selection")
 
 1. Follow the prompts to complete the setup. You should be asked to restart your computer.
-   ![Windows Insider Setup -- Confirmation](/assets/images/blog/extra/2020-05-21-009-confirmation.png "Windows Insider Setup -- Confirmation")
+   ![Windows Insider Setup -- Confirmation](./2020-05-21-009-confirmation.png "Windows Insider Setup -- Confirmation")
 
 1. Finally, go to Settings > Update & Security > Windows Update  and click Check for updates. Windows should now install the appropriate build based off your settings.
-   ![Windows Update](/assets/images/blog/extra/2020-05-21-010-windows-update.png "Windows Update")
+   ![Windows Update](./2020-05-21-010-windows-update.png "Windows Update")
 
 1. Restart your computer after installation is complete.
-   ![Windows Update Restart Now Button](/assets/images/blog/extra/2020-05-21-012-restart.png "Windows Update Restart Now Button")
-   ![Windows Update Restart](/assets/images/blog/extra/2020-05-21-013-restart.png "Windows Update Restart")
+   ![Windows Update Restart Now Button](./2020-05-21-012-restart.png "Windows Update Restart Now Button")
+   ![Windows Update Restart](./2020-05-21-013-restart.png "Windows Update Restart")
 
 After the installation is complete, you can confirm you have an appropriate build of Windows one of two ways. The first option: open a command prompt and execute `ver`:
 
@@ -95,7 +95,7 @@ You can now install WSL using Microsoft's [guide](https://docs.microsoft.com/en-
    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
    ~~~
 
-   ![Enable WSL](/assets/images/blog/extra/2020-05-21-017-powershell-enable-wsl.png "Enable WSL")
+   ![Enable WSL](./2020-05-21-017-powershell-enable-wsl.png "Enable WSL")
 
 1. Enable the Virtual Machine Platform:
 
@@ -103,7 +103,7 @@ You can now install WSL using Microsoft's [guide](https://docs.microsoft.com/en-
    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
    ~~~
 
-   ![Enable Virtual Machine Platform](/assets/images/blog/extra/2020-05-21-016-powershell-enable-vmp.png "Enable Virtual Machine Platform")
+   ![Enable Virtual Machine Platform](./2020-05-21-016-powershell-enable-vmp.png "Enable Virtual Machine Platform")
 
 1. Restart your computer
 
@@ -113,18 +113,18 @@ You can now install WSL using Microsoft's [guide](https://docs.microsoft.com/en-
    wsl --set-default-version 2
    ~~~
 
-   ![Set default WSL version](/assets/images/blog/extra/2020-05-21-018-wsl-default-version.png "Set default WSL version")
+   ![Set default WSL version](./2020-05-21-018-wsl-default-version.png "Set default WSL version")
 
 1. You may get a message stating `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`. Go to the [site](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel), install the kernel component.
 
 1. Open the `Microsoft Store`
-   ![Microsft Store](/assets/images/blog/extra/2020-05-21-014-store.png "Microsoft Store")
+   ![Microsft Store](./2020-05-21-014-store.png "Microsoft Store")
 
 1. Install [Ubuntu](https://www.microsoft.com/store/productId/9NBLGGH4MSV6). This should install the latest Ubuntu LTS.
-   ![Microsft Store -- Install Ubuntu](/assets/images/blog/extra/2020-05-21-019-ubuntu.png "Microsoft Store -- Install Ubuntu")
+   ![Microsft Store -- Install Ubuntu](./2020-05-21-019-ubuntu.png "Microsoft Store -- Install Ubuntu")
 
 1. Launch the`Ubuntu` app and you'll be presented with a bash shell. Linux will finish installing and you'll be prompted to setup a username and password.
-   ![Ubuntu App](/assets/images/blog/extra/2020-05-21-020-ubuntu-installing.png "Ubuntu App")
+   ![Ubuntu App](./2020-05-21-020-ubuntu-installing.png "Ubuntu App")
 
 1. If you install Ubuntu before installing the WSL 2 update, I believe you'll need to manually set the version to of WSL to use and a conversion will be initiated:
 
@@ -144,7 +144,7 @@ You can now install WSL using Microsoft's [guide](https://docs.microsoft.com/en-
    1. Place a checkmark next to `Use Ctrl+Shift+C/V as Copy/Paste`
    1. Click Ok
 
-   ![Ubuntu App -- Settings](/assets/images/blog/extra/2020-05-21-021-copy-paste.png "Ubuntu App -- Settings")
+   ![Ubuntu App -- Settings](./2020-05-21-021-copy-paste.png "Ubuntu App -- Settings")
 
 ## Install Terminus
 
@@ -152,7 +152,7 @@ I didn't like the Ubuntu app, so I tried a few different terminals and ended up 
 
 1. Install `Terminus`. Once installed it should default to using your default wsl distribution.
 
-![Terminus App](/assets/images/blog/extra/2020-05-21-024-terminus-2.png "Terminu App")
+![Terminus App](./2020-05-21-024-terminus-2.png "Terminu App")
 
 ## Setup Node & Rails
 
@@ -263,13 +263,13 @@ To setup Node and Rails I used a combination of the [Go Rails Ruby on Rails inst
 1. Install or open [VS Code](https://code.visualstudio.com/)
 
 1. Code will prompt you to install the [remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) extension. Click Install.
-   ![Visual Studio Code Remote WSL](/assets/images/blog/extra/2020-05-21-025-vs-code-wsl-install.png "Visual Studio Code Remote WSL")
+   ![Visual Studio Code Remote WSL](./2020-05-21-025-vs-code-wsl-install.png "Visual Studio Code Remote WSL")
 
 1. Open a new bash terminal (you may need to close and reopen terminus) and type in `code .`
-   ![VS Code Server for x64 installation](/assets/images/blog/extra/2020-05-21-027-bash-wsl.png "VS Code Server for x64 installation")
+   ![VS Code Server for x64 installation](./2020-05-21-027-bash-wsl.png "VS Code Server for x64 installation")
 
 1. When VS Code opens, there will be an indication in the lower left corner that the editor is connected to the code server.
-   ![VS Code WSL Indicator](/assets/images/blog/extra/2020-05-21-028-wsl-vscode.png "VS Code WSL Indicator")
+   ![VS Code WSL Indicator](./2020-05-21-028-wsl-vscode.png "VS Code WSL Indicator")
 
 ## Setup your dotfiles
 
