@@ -6,7 +6,7 @@ const postTemplate = path.resolve('./src/templates/posts.jsx');
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === 'Mdx') {
+  if (node.internal.type === 'MarkdownRemark') {
     const fileNode = getNode(node.parent);
     const kebabFilename = kebabCase(fileNode.name);
 
@@ -27,71 +27,47 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  const result = await graphql(`
-    query {
-      allMdx {
-        nodes {
-          id
-          fields {
-            title
-            slug
-          }
-          internal {
-            type
-            contentFilePath
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: ASC }
+          limit: 1000
+        ) {
+          nodes {
+            id
+            fields {
+              title
+              slug
+            }
+            internal {
+              type
+              contentFilePath
+            }
           }
         }
       }
-    }
-  `);
+    `,
+  );
 
   if (result.errors) {
     reporter.panicOnBuild('Error loading MDX result', result.errors);
   }
 
-  result.data.allMdx.nodes.forEach((node) => {
+  const posts = result.data.allMarkdownRemark.nodes;
+
+  posts.forEach((node, index) => {
+    const previousPostId = index === 0 ? null : posts[index - 1].id;
+    const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id;
+
     createPage({
-      // As mentioned above you could also query something else like frontmatter.title above and
-      // use a helper function like slugify to create a slug
       path: `/blog/${node.fields.slug}`,
-      // path to the MDX content file so webpack can pick it up and transform it into JSX
-      // component: node.internal.contentFilePath,
-      component: `${postTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
-      // You can use the values in this context in
-      // our page layout component
-      context: { id: node.id },
+      component: postTemplate,
+      context: {
+        id: node.id,
+        previousPostId,
+        nextPostId,
+      },
     });
   });
 };
-
-// exports.createSchemaCustomization = ({ actions }) => {
-//   const { createTypes } = actions;
-//   const typeDefs = `
-//     type Mdx implements Node @dontInfer {
-//       frontmatter: Frontmatter
-//       fields: Fields
-//     }
-//     type Frontmatter {
-//       title: String
-//       date: Date
-//       tags: [String]
-//       category: String
-//       publish: Boolean
-//       featured: Boolean
-//       socialImage: File @fileByRelativePath
-//       stage: String
-//       slug: String
-//     }
-//     type Fields {
-//       title: String!
-//       slug: String!
-//       date: Date!
-//       tagSlugs: [String]
-//       categorySlug: String
-//       category: String
-//       stage: String
-//     }
-//   `;
-
-//   createTypes(typeDefs);
-// };

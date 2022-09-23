@@ -1,4 +1,4 @@
 import './src/styles/global.css';
+import 'devicon/devicon.min.css';
 
-// require('prismjs/themes/prism-twilight.css');
 require('prism-themes/themes/prism-shades-of-purple.css');

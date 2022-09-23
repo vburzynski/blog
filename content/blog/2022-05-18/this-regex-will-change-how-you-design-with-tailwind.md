@@ -1,7 +1,7 @@
 ---
 title: This RegEx Will Change How You Design With Tailwind
 date: 2022-05-18T00:00:00.000-05:00
-image: 2022-05-18-this-regex-will-change-how-you-design-with-tailwind.jpg
+image: this-regex-will-change-how-you-design-with-tailwind.jpg
 imageAlt: A woman in a bookstore
 category: Development
 tags:
@@ -32,8 +32,6 @@ Well I have a simple regular expression to aid you in swapping out all your old 
 ~~~
 *No warranty is provided or inferred. Use at your own peril. Void where prohibited by law. May cause nausea, confusion, or panic. If you experience any of these symptoms, please discontinue use of the regular expression.*
 
-`(ext|decoration|bg|from|via|to|border|divide|outline|ring|ring-offset|shadow|accent|caret|fill|stroke){1}-(inherit|current|transparent|black|white|slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose|blueGray|coolGray|trueGray|warmGray|lightBlue){1}(-[0-9]{2,3})?`
-
 The regex above should match against all of the default atomic color utilties that TailwindCSS provides and can be modified to more specifically match your use case. You may want to narrow down the list of color names or utility names to catch a specific subset of utilizations. Custom color names could be added to the list. You might also expand the regex to target specific variant modifiers.
 
 For example, the regular expression below will match instances where at least one of the listed variant modifiers is used; narrows the set of utility names, and matches against a list of custom colors:
@@ -44,53 +42,14 @@ For example, the regular expression below will match instances where at least on
 
 ## List of variant modifiers provided by TailwindCSS
 
-~~~text
-first-letter|first-line|marker|selection|file|placeholder|backdrop|before|after|first|last|only|odd|even|first-of-type|last-of-type|only-of-type|visited|target|open|default|checked|indeterminate|placeholder-shown|autofill|required|valid|invalid|in-range|out-of-range|read-only|empty|focus-within|hover|focus|focus-visible|active|enabled|disabled|group|peer|ltr|rtl|motion-safe|motion-reduce|dark|print|sm|md|lg|xl|2xl|portrait|landscape
-~~~
+`first-letter` `first-line` `marker` `selection` `file` `placeholder` `backdrop` `before` `after` `first` `last` `only` `odd` `even` `first-of-type` `last-of-type` `only-of-type` `visited` `target` `open` `default` `checked` `indeterminate` `placeholder-shown` `autofill` `required` `valid` `invalid` `in-range` `out-of-range` `read-only` `empty` `focus-within` `hover` `focus` `focus-visible` `active` `enabled` `disabled` `group` `peer` `ltr` `rtl` `motion-safe` `motion-reduce` `dark` `print` `sm` `md` `lg` `xl` `2xl` `portrait` `landscape`
 
 ## List of default colors
 
-~~~text
-inherit|current|transparent|black|white|slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose|blueGray|coolGray|trueGray|warmGray|lightBlue
-~~~
+`inherit` `current` `transparent` `black` `white` `slate` `gray` `zinc` `neutral` `stone` `red` `orange` `amber` `yellow` `lime` `green` `emerald` `teal` `cyan` `sky` `blue` `indigo` `violet` `purple` `fuchsia` `pink` `rose` `blueGray` `coolGray` `trueGray` `warmGray` `lightBlue`
 
 ## List of utility prefixes
 
-~~~text
-text|decoration|bg|from|via|to|border|divide|outline|ring|ring-offset|shadow|accent|caret|fill|stroke
-~~~
+`text` `decoration` `bg` `from` `via` `to` `border` `divide` `outline` `ring` `ring-offset` `shadow` `accent` `caret` `fill` `stroke`
 
 Photo by <a href="https://unsplash.com/@darwiiiin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Darwin Vegher</a> on <a href="https://unsplash.com/s/photos/clutter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-~~~ javascript
-var path = require("path");
-var webpack = require("webpack");
-
-var BUILD_DIR = path.resolve(__dirname, './dist');
-var APP_DIR = path.resolve(__dirname, './assets/js');
-
-module.exports = {
-    entry: path.join(APP_DIR, "vendors.js"),
-    output: {
-        path: BUILD_DIR,
-        filename: "vendors.js",
-        library: "vendors"
-    },
-    plugins: [
-        new webpack.DllPlugin({
-            path: path.join(BUILD_DIR, "vendors-manifest.json"),
-            name: "vendors",
-            context: APP_DIR
-        })
-    ],
-    module: {
-      loaders: [{
-          test: /\.jsx?/,
-          include: APP_DIR,
-          exclude: /node_modules/,
-          loader: 'babel'
-        }
-      ]
-    }
-};
-~~~

@@ -8,10 +8,9 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: 'gatsby-transformer-remark',
       options: {
-        extensions: ['.md', '.mdx'],
-        gatsbyRemarkPlugins: [
+        plugins: [
           {
             resolve: 'gatsby-remark-prismjs',
             options: {
@@ -50,20 +49,20 @@ module.exports = {
               // existing language definition. More details on this option can be
               // found under the header "Add new language definition or extend an
               // existing language" below.
-              // languageExtensions: [
-              //   {
-              //     language: 'superscript',
-              //     extend: 'javascript',
-              //     definition: {
-              //       superscript_types: /(SuperType)/,
-              //     },
-              //     insertBefore: {
-              //       function: {
-              //         superscript_keywords: /(superif|superelse)/,
-              //       },
-              //     },
-              //   },
-              // ],
+              languageExtensions: [
+                {
+                  language: 'superscript',
+                  extend: 'javascript',
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
               // Customize the prompt used in shell output
               // Values below are default
               prompt: {
@@ -107,15 +106,3 @@ module.exports = {
     },
   ],
 };
-
-// In your gatsby-config.js
-[
-  {
-    resolve: 'gatsby-transformer-remark',
-    options: {
-      plugins: [
-
-      ],
-    },
-  },
-];
