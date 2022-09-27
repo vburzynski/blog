@@ -6,7 +6,7 @@ function IndexPage() {
   return (
     <Layout section="home">
       {/* <div className="container w-full md:max-w-3xl mx-auto pt-20 pattern-graph-paper"> */}
-      <div className="container w-full md:max-w-4xl mx-auto pt-20 pattern-graph-paper space-y-4">
+      <div className="container w-full md:max-w-4xl mx-auto pt-20 space-y-4 pattern">
         {/* <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">Welcome!</div> */}
         <Profile />
         <p>
