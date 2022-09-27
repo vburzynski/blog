@@ -8,7 +8,7 @@ function BlogPage({ data }) {
 
   return (
     <Layout section="blog">
-      <div className="container w-full md:max-w-3xl mx-auto pt-20">
+      <div className="bg-canvas container w-full md:max-w-4xl mx-auto mt-20 mb-6 rounded-md p-4 space-y-4">
         <section className="text-gray-600 body-font overflow-hidden">
           <div className="container px-5 py-6 space-y-6 mx-auto">
             {posts.map((post) => (

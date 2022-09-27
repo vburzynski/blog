@@ -1,22 +1,23 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 function Profile() {
   return (
     <div className="max-w-4xl flex items-center flex-wrap mx-auto my-32 lg:my-0">
       {/* Main Col */}
-      <div className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
+      <div className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-canvas opacity-80 mx-6 lg:mx-0">
         <div className="p-4 md:p-12 text-center lg:text-left">
           {/*  Image for mobile view */}
           <div
             className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
-            style={{ backgroundImage: "url('https://source.unsplash.com/MP0IUfwrn0A')" }}
+            style={{ backgroundImage: "url('../images/headshot.jpg')" }}
           />
 
-          <h1 className="text-3xl font-bold pt-8 lg:pt-0">Your Name</h1>
-          <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25" />
+          <h1 className="text-3xl font-bold pt-8 lg:pt-0">Valerie Burzynski</h1>
+          <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-primary opacity-25" />
           <p className="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
             <svg
-              className="h-4 fill-current text-green-700 pr-4"
+              className="h-4 fill-current text-primary pr-4"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -27,6 +28,7 @@ function Profile() {
             {' '}
             Software Developer
           </p>
+          <p>Professional Nerd Since 2007</p>
           <p className="pt-8 text-sm">
             Totally optional short description about yourself, what you do and so on.
           </p>
@@ -34,7 +36,7 @@ function Profile() {
           <div className="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
             <a className="link" href="/" data-tippy-content="@facebook_handle">
               <svg
-                className="h-6 fill-current text-gray-600 hover:text-green-700"
+                className="h-6 fill-current text-gray-600 hover:text-primary"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +48,7 @@ function Profile() {
             </a>
             <a className="link" href="/" data-tippy-content="@twitter_handle">
               <svg
-                className="h-6 fill-current text-gray-600 hover:text-green-700"
+                className="h-6 fill-current text-gray-600 hover:text-primary"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +62,7 @@ function Profile() {
             </a>
             <a className="link" href="/" data-tippy-content="@github_handle">
               <svg
-                className="h-6 fill-current text-gray-600 hover:text-green-700"
+                className="h-6 fill-current text-gray-600 hover:text-primary"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +76,7 @@ function Profile() {
             </a>
             <a className="link" href="/" data-tippy-content="@unsplash_handle">
               <svg
-                className="h-6 fill-current text-gray-600 hover:text-green-700"
+                className="h-6 fill-current text-gray-600 hover:text-primary"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +88,7 @@ function Profile() {
             </a>
             <a className="link" href="/" data-tippy-content="@dribble_handle">
               <svg
-                className="h-6 fill-current text-gray-600 hover:text-green-700"
+                className="h-6 fill-current text-gray-600 hover:text-primary"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +102,7 @@ function Profile() {
             </a>
             <a className="link" href="/" data-tippy-content="@instagram_handle">
               <svg
-                className="h-6 fill-current text-gray-600 hover:text-green-700"
+                className="h-6 fill-current text-gray-600 hover:text-primary"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +116,7 @@ function Profile() {
             </a>
             <a className="link" href="/" data-tippy-content="@youtube_handle">
               <svg
-                className="h-6 fill-current text-gray-600 hover:text-green-700"
+                className="h-6 fill-current text-gray-600 hover:text-primary"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -137,8 +139,15 @@ function Profile() {
       {/* Img Col */}
       <div className="w-full lg:w-2/5">
         {/*  Big profile image for side bar (desktop)  */}
-        <img src="https://source.unsplash.com/MP0IUfwrn0A" className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" />
-        {/*  Image from: http://unsplash.com/photos/MP0IUfwrn0A  */}
+        {/* <img src="https://source.unsplash.com/MP0IUfwrn0A" className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" /> */}
+        <StaticImage
+          className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
+          src="../images/headshot.jpg"
+          alt="Avatar of Valerie Burzynski"
+          placeholder="blurred"
+          layout="fixed"
+          width={350}
+        />
       </div>
     </div>
   );

@@ -32,8 +32,3 @@
 .gradient {
   background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 };
-
-.pattern {
-  background-color: #FF0000;
-  background-image: url("../images/circuit-board.svg");
-}

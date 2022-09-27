@@ -25,7 +25,7 @@ export default function PageTemplate({
 
   return (
     <Layout section="home">
-      <div className="container w-full md:max-w-3xl mx-auto pt-20">
+      <div className="bg-canvas container w-full md:max-w-4xl mx-auto mt-20 mb-6 rounded-md p-4 space-y-4">
         <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
           <BlogHeader title={post.fields.title} published={published} />
           <GatsbyImage image={image} alt={post.frontmatter.imageAlt} />
