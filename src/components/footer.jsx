@@ -1,5 +1,6 @@
 import React from 'react';
 import SocialMediaItem from './social-media-item';
+import socialmedia from '../data/socialmedia.yaml';
 
 function Footer() {
   return (
@@ -9,7 +10,6 @@ function Footer() {
           <div className="flex w-full md:w-1/2 ">
             <div className="px-8">
               <h3 className="font-bold text-gray-900">About</h3>
-              {/* TODO: Change this at some point */}
               <p className="py-4 text-gray-600 text-sm">
                 As an immersive Software Engineer and Web Developer, Valerie delves into complex
                 systems to decrypt and understand how the entire system works. Next, she builds a
@@ -22,26 +22,13 @@ function Footer() {
             <div className="px-8">
               <h3 className="font-bold text-gray-900">Social</h3>
               <ul className="list-reset items-center text-sm pt-3">
-                <SocialMediaItem
-                  iconClassName="devicon-twitter-original"
-                  href="https://twitter.com/vburzynski"
-                  title="Twitter"
-                />
-                <SocialMediaItem
-                  iconClassName="devicon-linkedin-plain"
-                  href="https://www.linkedin.com/in/valerieburzynski/"
-                  title="LinkedIn"
-                />
-                <SocialMediaItem
-                  iconClassName="devicon-github-original"
-                  href="https://github.com/vburzynski"
-                  title="GitHub"
-                />
-                <SocialMediaItem
-                  iconClassName="devicon-facebook-original"
-                  href="https://www.facebook.com/vburzynski"
-                  title="Facebook"
-                />
+                {socialmedia.map(({ iconClassName, href, title }) => (
+                  <SocialMediaItem
+                    iconClassName={iconClassName}
+                    href={href}
+                    title={title}
+                  />
+                ))}
               </ul>
             </div>
           </div>
@@ -50,4 +37,5 @@ function Footer() {
     </footer>
   );
 }
+
 export default Footer;
