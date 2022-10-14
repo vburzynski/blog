@@ -1,21 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { DateTime } from 'luxon';
 import Layout from '../components/layout';
 import PageDivider from '../components/page-divider';
-import BlogNavigation from '../components/blog-navigation';
-import BlogHeader from '../components/blog-header';
-import BlogTags from '../components/blog-tags';
-
-const shortcodes = { Link };
+import { Blog } from '../components';
 
 export default function PageTemplate({
   data: {
     previous,
     next,
-    site,
     markdownRemark: post,
   },
   children,
@@ -25,25 +20,16 @@ export default function PageTemplate({
 
   return (
     <Layout section="home">
-      <div className="bg-canvas container w-full md:max-w-4xl mx-auto mt-20 mb-6 rounded-md p-4 space-y-4">
-        <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
-          <BlogHeader title={post.fields.title} published={published} />
-          <GatsbyImage image={image} alt={post.frontmatter.imageAlt} />
-          <BlogTags tags={post.frontmatter.tags} />
-          <article
-            className="prose lg:prose-xl prose-code:before:content-none prose-code:overflow-hidden prose-code:after:content-none prose-code:break-word prose-code:whitespace-pre-wrap prose-pre:break-word prose-pre:whitespace-pre-wrap prose-pre:overflow-hidden"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            itemProp="articleBody"
-          />
-          {children}
-        </div>
-        <BlogTags tags={post.frontmatter.tags} />
+      <Blog>
+        <Blog.Header title={post.fields.title} published={published} />
+        <GatsbyImage image={image} alt={post.frontmatter.imageAlt} />
+        <Blog.Tags tags={post.frontmatter.tags} />
+        <Blog.Content html={post.html} />
+        {children}
+        <Blog.Tags tags={post.frontmatter.tags} />
         <PageDivider />
-        <BlogNavigation
-          previous={previous}
-          next={next}
-        />
-      </div>
+        <Blog.Navigation previous={previous} next={next} />
+      </Blog>
     </Layout>
   );
 }

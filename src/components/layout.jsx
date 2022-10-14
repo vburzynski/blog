@@ -6,14 +6,9 @@ import svg from '../images/circuit-board.svg';
 
 function Layout({ section, children }) {
   return (
-    <div
-      className="bg-shadow font-sans leading-normal tracking-normal min-h-screen flex flex-col"
-    >
+    <div className="bg-shadow font-sans leading-normal tracking-normal min-h-screen flex flex-col">
       <Header section={section} />
-      <div
-        className="grow"
-        style={{ backgroundImage: `url(${svg})` }}
-      >
+      <div className="grow" style={{ backgroundImage: `url(${svg})` }}>
         {children}
       </div>
       <Footer />

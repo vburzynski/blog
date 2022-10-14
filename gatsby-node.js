@@ -1,7 +1,6 @@
 const path = require('path');
 const kebabCase = require('lodash/kebabCase');
-
-const postTemplate = path.resolve('./src/templates/posts.jsx');
+const blogPostTemplate = path.resolve('./src/templates/blog-post.jsx');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -62,7 +61,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: `/blog/${node.fields.slug}`,
-      component: postTemplate,
+      component: blogPostTemplate,
       context: {
         id: node.id,
         previousPostId,
