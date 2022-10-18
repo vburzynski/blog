@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,jsx,ts,tsx}',
@@ -6,6 +7,19 @@ module.exports = {
     './src/templates/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
+    // typography: {
+    //   default: {
+    //     css: {
+    //       pre: null,
+    //       code: null,
+    //       'code::before': null,
+    //       'code::after': null,
+    //       'pre code': null,
+    //       'pre code::before': null,
+    //       'pre code::after': null,
+    //     },
+    //   },
+    // },
     extend: {
       colors: {
         canvas: {
