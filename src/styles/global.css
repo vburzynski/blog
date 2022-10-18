@@ -26,6 +26,11 @@
 @layer components {
   .gatsby-highlight {
     @apply not-prose;
+
+  }
+  .gatsby-highlight code[class*="language-"], pre[class*="language-"] {
+    white-space: normal !important;
+    word-break: break-word !important;
   }
 }
 

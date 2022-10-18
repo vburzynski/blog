@@ -26,28 +26,26 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
-          nodes {
-            id
-            fields {
-              title
-              slug
-            }
-            internal {
-              type
-              contentFilePath
-            }
+  const result = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: ASC }
+        limit: 1000
+      ) {
+        nodes {
+          id
+          fields {
+            title
+            slug
+          }
+          internal {
+            type
+            contentFilePath
           }
         }
       }
-    `,
-  );
+    }
+  `);
 
   if (result.errors) {
     reporter.panicOnBuild('Error loading MDX result', result.errors);

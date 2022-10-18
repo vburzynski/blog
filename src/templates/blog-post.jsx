@@ -35,14 +35,6 @@ export default function PageTemplate({
 }
 
 PageTemplate.propTypes = {
-  // data: PropTypes.shape({
-  //   mdx: PropTypes.shape({
-  //     frontmatter: PropTypes.shape({
-  //       title: PropTypes.string.isRequired,
-  //       tags: PropTypes.arrayOf(PropTypes.string),
-  //     }).isRequired,
-  //   }).isRequired,
-  // }).isRequired,
   data: PropTypes.any,
   children: PropTypes.node,
 };
