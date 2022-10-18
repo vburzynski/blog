@@ -5,7 +5,7 @@ import { DateTime } from 'luxon';
 function BlogCard({ post }) {
   return (
     <div className="flex flex-wrap md:flex-nowrap">
-      <div className="md:w-32 md:mb-0 mb-6 flex-shrink-0 flex flex-col text-sm border-r">
+      <div className="md:w-32 md:mb-0 mb-6 flex-shrink-0 flex flex-col text-sm">
         <span className="font-semibold title-font text-gray-700">
           {post.frontmatter.category}
         </span>

@@ -11,9 +11,7 @@ function Footer() {
             <div className="px-8">
               <h3 className="font-bold text-gray-900">About</h3>
               <p className="py-4 text-gray-600 text-sm">
-                As an immersive Software Engineer and Web Developer, Valerie delves into complex
-                systems to decrypt and understand how the entire system works. Next, she builds a
-                conceptual mind map to refactor and improve the project.
+                Something....
               </p>
             </div>
           </div>
