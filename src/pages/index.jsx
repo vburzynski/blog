@@ -1,3 +1,4 @@
+import { oneLine } from 'common-tags';
 import React from 'react';
 import Layout from '../components/layout';
 import Profile from '../components/profile';
@@ -29,29 +30,29 @@ function IndexPage() {
   return (
     <Layout section="home">
       <div className="container w-full lg:max-w-4xl mx-auto space-y-4">
-        {/* <div className="flex flex-col w-full justify-center lg:items-start overflow-y-hidden">
-          <h1 className="my-4 text-3xl md:text-5xl text-primary-200 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Main Hero Message to sell your app</h1>
-          <p className="leading-normal text-secondary text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Sub-hero message, not too long and not too short. Make it just right!</p>
-        </div> */}
         <Profile />
-        <div className="lg:mx-auto w-full lg:w-3/4 rounded-lg shadow-2xl shadow-primary/50 bg-canvas p-4 space-y-3">
-          <h1 className="text-xl font-bold">Experience</h1>
-          <div className="border-b-2 border-primary opacity-25" />
-          {workExperience.map(({ title, start, end }) => (
-            <div className="text-center sm:text-left sm:flex sm:justify-between">
-              <div className="text-lg font-bold">{ title }</div>
-              <div className="text-sm font-bold text-primary-600">{`${start} to ${end}`}</div>
+        <div className="lg:mx-auto w-full lg:w-3/4 px-4">
+          <div className="rounded-lg shadow-2xl shadow-primary/50 bg-canvas space-y-3 p-4">
+            <h1 className="text-xl font-bold">Experience</h1>
+            <div className="border-b-2 border-primary opacity-25" />
+            {workExperience.map(({ title, start, end }) => (
+              <div className="text-center sm:text-left sm:flex sm:justify-between">
+                <div className="text-lg font-medium">{ title }</div>
+                <div className="text-sm font-medium text-primary-600">{`${start} to ${end}`}</div>
+              </div>
+            ))}
+            <h1 className="text-xl font-bold">Education</h1>
+            <div className="border-b-2 border-primary opacity-25" />
+            <div>
+              <div className="text-center sm:text-left sm:flex sm:justify-between">
+                <div className="text-lg font-medium">
+                  University of Illinois
+                  <div className="text-xs">Bachelor of Arts in Liberal Arts and Sciences</div>
+                  <div className="text-xs">Studied Rhetoric and Computer Science</div>
+                </div>
+                <div className="text-sm font-medium text-primary-600">Urbana-Champaign, IL</div>
+              </div>
             </div>
-          ))}
-          <h1 className="text-xl font-bold">Education</h1>
-          <div className="border-b-2 border-primary opacity-25" />
-          <div>
-            <div className="text-center sm:text-left sm:flex sm:justify-between">
-              <div className="text-lg font-bold">University of Illinois</div>
-              <div className="text-sm font-bold text-primary-600">Urbana-Champaign, IL</div>
-            </div>
-            <p>Bachelor of Arts in Liberal Arts and Sciences</p>
-            <p>Rhetoric and Computer Science</p>
           </div>
         </div>
       </div>

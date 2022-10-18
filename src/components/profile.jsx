@@ -4,8 +4,7 @@ import socialmedia from '../data/socialmedia.yaml';
 
 function Profile() {
   return (
-    <div className="max-w-4xl flex flex-wrap items-center mx-auto">
-      {/* Main Col */}
+    <div className="max-w-4xl flex flex-wrap items-center mx-auto pt-28 px-4 lg:pt-20 pb-4">
       <div className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl shadow-primary/50 bg-canvas opacity-90">
         <div className="p-4 lg:p-12 text-center lg:text-left">
           <StaticImage
@@ -30,11 +29,14 @@ function Profile() {
             {' '}
             Software Developer
           </p>
-          <p>Professional Nerd Since 2007</p>
-          <p className="pt-8 text-sm">
-            As an immersive Software Engineer and Web Developer, Valerie delves into complex systems
-            to decrypt and understand how the entire system works. Next, she builds a conceptual
-            mind map to refactor and improve the project.
+          <p>Professional Nerd Since 2006</p>
+          <p className="pt-4 text-sm">
+            As an immersive Software Engineer and Web Developer, I love diving into large complex
+            systems to decrypt and understand how the entire thing works. I also find tough
+            or challenging technical issues rather engaging. Probably helps being bit of an
+            epistemophile; which is that I have a love of knowledge and have the impulse to
+            investigate and iniquire. I'm perpetually curious. I find great architecture, structure,
+            and design inspiring.
           </p>
 
           <div className="text-2xl mt-6 pb-8 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
