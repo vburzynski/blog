@@ -33,7 +33,7 @@ function IndexPage() {
         <Profile />
         <div className="lg:mx-auto w-full lg:w-3/4 px-4">
           <div className="rounded-lg shadow-2xl shadow-primary/50 bg-canvas space-y-3 p-4">
-            <h1 className="text-xl font-bold">Experience</h1>
+            <h1 className="text-center sm:text-left text-xl font-bold">Experience</h1>
             <div className="border-b-2 border-primary opacity-25" />
             {workExperience.map(({ title, start, end }) => (
               <div className="text-center sm:text-left sm:flex sm:justify-between">
@@ -41,7 +41,7 @@ function IndexPage() {
                 <div className="text-sm font-medium text-primary-600">{`${start} to ${end}`}</div>
               </div>
             ))}
-            <h1 className="text-xl font-bold">Education</h1>
+            <h1 className="text-center sm:text-left text-xl font-bold">Education</h1>
             <div className="border-b-2 border-primary opacity-25" />
             <div>
               <div className="text-center sm:text-left sm:flex sm:justify-between">

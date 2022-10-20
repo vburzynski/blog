@@ -7,8 +7,8 @@ export default function NavigationItem({ title, href, isActive }) {
     : 'text-gray-600 hover:text-gray-900 hover:text-underline';
 
   return (
-    <li className="mr-3">
-      <a className={`inline-block py-2 px-4 ${customStyle} no-underline`} href={href}>
+    <li>
+      <a className={`inline-block py-2 px-2 ${customStyle} no-underline`} href={href}>
         {title}
       </a>
     </li>
