@@ -12,7 +12,7 @@ function Profile() {
             <StaticImage
               src="../images/headshot.jpg"
               alt="Headshot of Valerie Burzynski"
-              className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
+              className="rounded-full h-48 w-48 bg-center overflow-hidden"
               placeholder="blurred"
               width={192}
               height={192}
