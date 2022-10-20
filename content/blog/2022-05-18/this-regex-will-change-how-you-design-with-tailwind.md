@@ -53,3 +53,5 @@ For example, the regular expression below will match instances where at least on
 `text` `decoration` `bg` `from` `via` `to` `border` `divide` `outline` `ring` `ring-offset` `shadow` `accent` `caret` `fill` `stroke`
 
 Photo by <a href="https://unsplash.com/@darwiiiin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Darwin Vegher</a> on <a href="https://unsplash.com/s/photos/clutter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Republished from [bendyworks.com/blog](bendyworks.com/blog) with permission.

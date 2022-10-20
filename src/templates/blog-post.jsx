@@ -23,10 +23,10 @@ export default function PageTemplate({
       <Blog>
         <Blog.Header title={post.fields.title} published={published} />
         <GatsbyImage image={image} alt={post.frontmatter.imageAlt} />
-        <Blog.Tags tags={post.frontmatter.tags} />
+        {/* <Blog.Tags tags={post.frontmatter.tags} /> */}
         <Blog.Content html={post.html} />
         {children}
-        <Blog.Tags tags={post.frontmatter.tags} />
+        {/* <Blog.Tags tags={post.frontmatter.tags} /> */}
         <PageDivider />
         <Blog.Navigation previous={previous} next={next} />
       </Blog>

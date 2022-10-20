@@ -194,3 +194,5 @@ webpack --profile --json > stats.json
 ~~~
 
 The tool will show warnings and errors for diagnosing your build issues as well as provide suggestions and hints on how to optimize your code. Another neat feature is that it generates a force-directed graph of all your modules and breaks down the stats for all the code in the build.
+
+Republished from [bendyworks.com/blog](bendyworks.com/blog) with permission.

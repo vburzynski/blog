@@ -94,3 +94,5 @@ In conlusion, we can fix the bug by adding the missing comma:
 ~~~javascript
 _.get(state, ['key1', 'key2'], {});
 ~~~
+
+Republished from [bendyworks.com/blog](bendyworks.com/blog) with permission.

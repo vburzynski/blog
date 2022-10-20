@@ -412,6 +412,8 @@ The JSON API Styled Swagger Schema is now complete!
 
 Stay tuned for [*Phase 3: Developing an API with Express and Swagger*][phase03]
 
+Republished from [bendyworks.com/blog](bendyworks.com/blog) with permission.
+
 [jsonapi]: http://jsonapi.org/
 [swagger]: https://swagger.io/
 [swagger-ui]: https://github.com/swagger-api/swagger-ui

@@ -14,8 +14,8 @@ function BlogCard({ post }) {
         </span>
       </div>
       <div className="md:flex-grow">
-        <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">
-          <a className="text-pink-500" href={`/blog/${post.fields.slug}`}>
+        <h2 className="text-2xl font-medium text-primary-700 title-font mb-2">
+          <a href={`/blog/${post.fields.slug}`}>
             {post.fields.title}
           </a>
         </h2>

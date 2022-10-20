@@ -172,6 +172,8 @@ Congratulations! You've completed the project setup.
 
 Stay tuned for [*Phase 2: Designing your API with Swagger and JSON API*][phase02]
 
+Republished from [bendyworks.com/blog](bendyworks.com/blog) with permission.
+
 [nvm]: https://github.com/creationix/nvm
 [n]: https://github.com/tj/n
 [jsonapi]: http://jsonapi.org/

@@ -362,3 +362,5 @@ npm run serve
 ~~~
 
 For more information concerning Webpack v2, check out their guides here: [https://webpack.js.org/guides/](https://webpack.js.org/guides/)
+
+Republished from [bendyworks.com/blog](bendyworks.com/blog) with permission.

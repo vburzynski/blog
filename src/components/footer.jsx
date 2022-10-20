@@ -5,31 +5,18 @@ import socialmedia from '../data/socialmedia.yaml';
 function Footer() {
   return (
     <footer className="bg-white border-t border-gray-400 shadow flex-none">
-      <div className="container max-w-4xl mx-auto flex py-8">
-        <div className="w-full mx-auto flex flex-wrap">
-          <div className="flex w-full md:w-1/2 ">
-            <div className="px-8">
-              <h3 className="font-bold text-gray-900">About</h3>
-              <p className="py-4 text-gray-600 text-sm">
-                Something....
-              </p>
-            </div>
-          </div>
-
-          <div className="flex w-full md:w-1/2">
-            <div className="px-8">
-              <h3 className="font-bold text-gray-900">Social</h3>
-              <ul className="list-reset items-center text-sm pt-3">
-                {socialmedia.map(({ iconClassName, href, title }) => (
-                  <SocialMediaItem
-                    iconClassName={iconClassName}
-                    href={href}
-                    title={title}
-                  />
-                ))}
-              </ul>
-            </div>
-          </div>
+      <div className="container max-w-4xl mx-auto flex py-2">
+        <div className="w-full mx-auto flex justify-end items-center space-x-2">
+          <h3 className="font-bold text-gray-900">Social Media:</h3>
+          <ul className="list-reset justify-center text-sm flex space-x-2">
+            {socialmedia.map(({ iconClassName, href, title }) => (
+              <SocialMediaItem
+                iconClassName={iconClassName}
+                href={href}
+                title={title}
+              />
+            ))}
+          </ul>
         </div>
       </div>
     </footer>

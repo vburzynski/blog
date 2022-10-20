@@ -298,3 +298,5 @@ In the end, I'd recommend WSL for general Rails and Node development. However, t
 ### Image Attributions
 
 The title image for this blog post uses Tux as drawn by [Larry Ewing](mailto:lewing@isc.tamu.edu)
+
+Republished from [bendyworks.com/blog](bendyworks.com/blog) with permission.

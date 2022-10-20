@@ -625,6 +625,8 @@ You've done it! Before you lies an API server and an Ember app. [Phase 1][phase0
 
 Until next time, have fun coding!
 
+Republished from [bendyworks.com/blog](bendyworks.com/blog) with permission.
+
 [nvm]: https://github.com/creationix/nvm
 [n]: https://github.com/tj/n
 [jsonapi]: http://jsonapi.org/

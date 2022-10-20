@@ -2832,6 +2832,8 @@ The JSON API server is now complete!
 
 Stay tuned for [*Phase 4: Building an Ember App that connects to a JSON API server*][phase04].
 
+Republished from [bendyworks.com/blog](bendyworks.com/blog) with permission.
+
 [phase01]: /blog/json-api-phase-1-setup/
 [phase02]: /blog/json-api-phase-2-api-design/
 [phase04]: /blog/json-api-phase-4-ember/
