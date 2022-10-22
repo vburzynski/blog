@@ -5,7 +5,8 @@ function BlogAuthor() {
   return (
     <div className="flex w-full items-center font-sans px-4 py-12">
       <StaticImage
-        className="w-10 h-10 rounded-full mr-4"
+        className="w-10 h-10 mr-4"
+        imgClassName="rounded-full"
         src="../../../images/profile.jpg"
         alt="Avatar of Valerie Burzynski"
         placeholder="blurred"

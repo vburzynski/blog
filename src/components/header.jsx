@@ -42,7 +42,8 @@ function Header({ section }) {
       <div className="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-1">
         <div className="flex pl-4">
           <StaticImage
-            className="w-10 h-10 rounded-full mr-2"
+            className="w-10 h-10 mr-2"
+            imgClassName="rounded-full"
             src="../images/profile.jpg"
             alt="Avatar of Valerie Burzynski"
             placeholder="blurred"

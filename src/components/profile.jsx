@@ -8,16 +8,15 @@ function Profile() {
     <div className="max-w-4xl flex flex-wrap items-center mx-auto pt-28 px-4 lg:pt-20 pb-4">
       <div className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl shadow-primary/50 bg-canvas opacity-90">
         <div className="p-4 lg:p-12 text-center lg:text-left">
-          <div className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center">
-            <StaticImage
-              src="../images/headshot.jpg"
-              alt="Headshot of Valerie Burzynski"
-              className="rounded-full h-48 w-48 bg-center overflow-hidden"
-              placeholder="blurred"
-              width={192}
-              height={192}
-            />
-          </div>
+          <StaticImage
+            src="../images/headshot.jpg"
+            alt="Headshot of Valerie Burzynski"
+            className="block lg:hidden mx-auto -mt-16 h-48 w-48"
+            imgClassName="rounded-full"
+            placeholder="blurred"
+            width={192}
+            height={192}
+          />
 
           <h1 className="text-3xl font-bold pt-8 lg:pt-0">Valerie Burzynski</h1>
           <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-primary opacity-25" />
@@ -55,7 +54,8 @@ function Profile() {
 
       <div className="w-full lg:w-2/5">
         <StaticImage
-          className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
+          className="hidden lg:block"
+          imgClassName="rounded-none lg:rounded-lg shadow-2xl"
           src="../images/headshot.jpg"
           alt="Avatar of Valerie Burzynski"
           placeholder="blurred"

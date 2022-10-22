@@ -23,8 +23,7 @@
   }
 } */
 
-@layer components {
-}
+@layer components {}
 
 .gatsby-highlight {
   background-color: rgb(30, 30, 63);
@@ -50,11 +49,12 @@
 }
 
 /* Specifically wrap lines for regex (this messes up other languages like js in PrismJS */
-.gatsby-highlight code[class*="language-regex"], pre[class*="language-regex"] {
+.gatsby-highlight code[class*="language-regex"],
+pre[class*="language-regex"] {
   white-space: normal !important;
   word-break: break-word !important;
 }
 
 .gradient {
   background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-};
+}
