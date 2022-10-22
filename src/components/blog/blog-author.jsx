@@ -7,7 +7,7 @@ function BlogAuthor() {
       <StaticImage
         className="w-10 h-10 mr-4"
         imgClassName="rounded-full"
-        src="../../../images/profile.jpg"
+        src="../../images/profile.jpg"
         alt="Avatar of Valerie Burzynski"
         placeholder="blurred"
         layout="fixed"
