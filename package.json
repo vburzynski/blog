@@ -25,6 +25,7 @@
     "devicon": "^2.15.1",
     "eslint-config-airbnb": "^19.0.4",
     "gatsby": "^4.23.1",
+    "gatsby-plugin-feed": "^4.24.0",
     "gatsby-plugin-image": "^2.23.1",
     "gatsby-plugin-mdx": "^4.2.1",
     "gatsby-plugin-sharp": "^4.23.1",
