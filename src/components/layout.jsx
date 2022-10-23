@@ -8,7 +8,7 @@ function Layout({ section, children }) {
   return (
     <div className="bg-shadow font-sans leading-normal tracking-normal min-h-screen flex flex-col">
       <Header section={section} />
-      <div className="grow pt-11" style={{ backgroundImage: `url(${svg})` }}>
+      <div className="grow pt-11 lg:pt-16" style={{ backgroundImage: `url(${svg})` }}>
         {children}
       </div>
       <Footer />

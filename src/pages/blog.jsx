@@ -8,13 +8,13 @@ function BlogPage({ data }) {
 
   return (
     <Layout section="blog">
-      <Blog>
-        <div className="container px-5 py-6 space-y-6 mx-auto">
+      <div className="container w-full lg:max-w-4xl mx-auto p-4 space-y-4">
+        <Blog>
           {posts.map((post) => (
             <Blog.Card post={post} />
           ))}
-        </div>
-      </Blog>
+        </Blog>
+      </div>
     </Layout>
   );
 }
@@ -43,6 +43,7 @@ export const pageQuery = graphql`
         frontmatter {
           date
           category
+          summary
         }
       }
     }

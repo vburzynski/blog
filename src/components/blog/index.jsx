@@ -9,10 +9,8 @@ import BlogCard from './blog-card';
 
 function Blog({ children }) {
   return (
-    <div className="bg-canvas container w-full md:max-w-4xl mx-auto mt-20 mb-6 rounded-md p-4 space-y-4">
-      <div className="w-full text-xl text-gray-800 leading-normal">
-        {children}
-      </div>
+    <div className="w-full text-xl text-gray-800 leading-normal bg-canvas rounded-md p-4 space-y-4">
+      {children}
     </div>
   );
 }
