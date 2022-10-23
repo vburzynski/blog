@@ -33,11 +33,11 @@ function ProfileCard() {
             </p>
             <p className="pt-4 text-sm">
               As an immersive Software Engineer and Web Developer, I love diving into large complex
-              systems to decrypt and understand how the entire thing works. I also find tough
-              or challenging technical issues rather engaging. Probably helps being bit of an
-              epistemophile; which is that I have a love of knowledge and have the impulse to
-              investigate and iniquire. I'm perpetually curious. I find great architecture,
-              structure, and design inspiring.
+              systems to decrypt and understand how everything works. I also find tough or
+              challenging technical issues rather engaging. It probably helps that I'm a bit of
+              an epistemophile; I have a love of knowledge as well as the impulse to investigate
+              and inquire. I'm perpetually curious. I find great architecture, structure, and
+              design inspiring.
             </p>
 
             <div className="text-2xl mt-6 pb-8 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
