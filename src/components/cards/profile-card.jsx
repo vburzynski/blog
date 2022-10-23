@@ -11,7 +11,7 @@ function ProfileCard() {
           <div className="p-4 lg:p-12 text-center lg:text-left">
             <div className="block lg:hidden mx-auto -mt-16 h-48 w-48">
               <StaticImage
-                src="../images/headshot.jpg"
+                src="../../images/headshot.jpg"
                 alt="Headshot of Valerie Burzynski"
                 className="h-48 w-48"
                 imgClassName="block lg:hidden rounded-full"
@@ -59,7 +59,7 @@ function ProfileCard() {
           <StaticImage
             className=""
             imgClassName="rounded-none lg:rounded-lg shadow-2xl"
-            src="../images/headshot.jpg"
+            src="../../images/headshot.jpg"
             alt="Avatar of Valerie Burzynski"
             placeholder="blurred"
             layout="fixed"
