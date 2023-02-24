@@ -6,7 +6,7 @@ function BlogContent({ html }) {
   return (
     <article
       className={oneLine`
-        prose lg:prose-xl
+        prose lg:prose-base max-w-none
         prose-code:before:content-none
         prose-code:overflow-hidden
         prose-code:after:content-none

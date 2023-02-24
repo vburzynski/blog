@@ -8,7 +8,7 @@ function BlogPage({ data }) {
 
   return (
     <Layout section="blog">
-      <div className="container w-full lg:max-w-4xl mx-auto p-4 space-y-4">
+      <div className="container w-full p-4 mx-auto space-y-4 lg:max-w-4xl">
         <Blog>
           {posts.map((post) => (
             <Blog.Card post={post} />
@@ -32,7 +32,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
       nodes {
         id
         excerpt
