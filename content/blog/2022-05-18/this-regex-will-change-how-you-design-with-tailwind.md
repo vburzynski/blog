@@ -11,8 +11,6 @@ tags:
 summary: An exploration of how to utilize regular expressions to change the design of your website when using TailwindCSS.
 ---
 
-# This RegEx Will Change How You Design With Tailwind
-
 Are you using TailwindCSS in you project?
 
 > ... of course you are it's all the rage lately, and everyone’s using it.

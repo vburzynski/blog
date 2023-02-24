@@ -15,8 +15,6 @@ tags:
 summary: A tale that relays my experiences getting Capybara system tests to run successfully in a dev-container on an Apple silicon based computer.
 ---
 
-# How to Get Your Capybara System Tests Running in a Docker Dev Container on Apple Silicon
-
 ## The Journey Begins
 
 At the end of last year my main work machine was upgraded to a MacBook Pro with an M1 Max processor. I quickly got to work setting up my usual dev environment, then cloned the git project I'm working on, built the dev container, and set myself to work. At first, everything went smoothly. The issue I ran into, however, was that our RSpec/Capybara/Selenium System Tests wouldn't run on my machine. I also discovered that my coworkers who were also running on Apple silicon machines, had run into similar issues and had conceded to allowing system tests to run on the CI server. A survey of the usual internet sources revealed that others had run into the issue as well. From the brief scan, it seemed many things had been attempted, but nothing stood out as the answer. Dissatisfied, and with some time off for the holidays, I set out to find a solution.
