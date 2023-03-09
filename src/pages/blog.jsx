@@ -11,7 +11,7 @@ function BlogPage({ data }) {
       <div className="container w-full p-4 mx-auto space-y-4 lg:max-w-4xl">
         <Blog>
           {posts.map((post) => (
-            <Blog.Card post={post} />
+            <Blog.Card post={post} key={post.id} />
           ))}
         </Blog>
       </div>

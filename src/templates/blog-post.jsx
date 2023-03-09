@@ -20,14 +20,14 @@ export default function PageTemplate({
 
   return (
     <Layout section="home">
-      <div className="container w-full lg:max-w-4xl mx-auto p-4 space-y-4">
+      <div className="container w-full p-4 mx-auto space-y-4 lg:max-w-4xl">
         <Blog>
           <Blog.Header
             title={post.fields.title}
             summary={post.frontmatter.summary}
             published={published}
           />
-          <GatsbyImage image={image} alt={post.frontmatter.imageAlt} />
+          {image && (<GatsbyImage image={image} alt={post.frontmatter.imageAlt} />)}
           {/* <Blog.Tags tags={post.frontmatter.tags} /> */}
           <Blog.Content html={post.html} />
           {children}
