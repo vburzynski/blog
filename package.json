@@ -26,6 +26,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "gatsby": "^5.7.0",
     "gatsby-plugin-feed": "^5.7.0",
+    "gatsby-plugin-google-gtag": "^5.7.0",
     "gatsby-plugin-image": "^3.7.0",
     "gatsby-plugin-mdx": "^5.7.0",
     "gatsby-plugin-sharp": "^5.7.0",
