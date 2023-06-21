@@ -1,0 +1,60 @@
+---
+title: Let Us Dismantle the Artifice of Standup
+type: note
+classification: private
+date: 2023-06-21T08:33:38-05:00
+created: 2023-06-19T07:56:20-05:00
+updated: 2023-06-21T08:33:38-05:00
+image: ./pexels-yan-krukau-7794083.jpg
+imageAlt: 
+tags:
+  - Agile
+  - Diversity
+  - Equity
+  - Inclusion
+  - Huddle
+---
+
+For the uninitiated, "Standup" is a metaphoric title given to a daily team meeting where all attendees stand. The intent of this is to hasten the meeting while achieving an objective: to have the team discuss the work that is in flight in order to sync up, ascertain the general progress of current efforts, identify obstacles, and look ahead. Upon such a hasty inspection, the underlying issues of "Standup" may not be readily apparent. The goals are admirable and useful, yet it is the applied mechanism that is both discriminatory and ineffective; in fact, it may actually impede upon the stated goals of the meeting.
+
+## The Metaphor No Longer Applies
+
+Standing and having an in-person conversation are increasingly incompatible with today's working environment. The world is comprised more and more of remote and distributed teams, which makes it necessary to host or stream most meetings virtually through video chat. This ensures that everyone on the team has access to information and has the opportunity to participate. If you're streaming an in-person meeting to a few team members, it's easy to inadvertently discriminate against those who are remote. Often, such meetings are a stop-gap and improvised measure to include someone who is temporarily working from a remote location. This could mean they are working on-site with a client or from home. A makeshift video streaming solution is constructed, or someone's laptop is precariously directed at the in-person team. The act of setting up is disruptive and delays the meeting while technical hurdles are solved. During the meeting, for those phoning in, the audio quality is poor, and you can't see everyone's face. You're also likely to not be able to participate in the same capacity because, for those attending in person, the physical presence of those around you naturally commands more attention than the laptop sitting on the desk at the far end of the group.
+
+When virtual meetings are oriented towards remote communication, however, all participants join a video chat and sit; each individual uses their own computer, or small groups sit around a centralized camera. Whatever the setup, video chat is the primary channel of communication, which ensures equal access and participation. A virtual meeting also presents an opportunity to record meetings, generate text transcriptions, and make easier use of tools and technology such as desktop sharing. Standing is also naturally discarded in this environment; in order to attain optimal video and audio quality and operate the chat controls, it's best to be in proximity to the equipment. As a result, the mechanism that regulated the length of meetings is now defeated. The metaphor of "standup" is outdated and outmoded. The team must rely on other means of maintaining good meeting discipline and etiquette.
+
+## The Metaphor is Unnecessarily Ableist
+
+It's convenient to dismiss the notion that "stand up" is ableist, as it is frequently only a metaphor where no one stands or there is no expectation to do so. Language, however, has power, and its usage is neither benign nor harmless. Ableist language promotes stigmatization and marginalization, trivializes the experiences of people with disabilities, and equates disability with deficit.
+
+Furthermore, good intent doesn't erase the intrinsic ableism in language. Words are all symbols that represent ideas and concepts; as a result, they will always be subjectively interpreted by each individual person and conjure up associations and relationships that are unique to their experiences. So when you use language and cause harm, even when that harm is unintentional or inadvertent, the significance of your intent is small in comparison to the impact you made. If someone experiences your words as oppressive, your intent doesn't lessen, negate, or change that. In fact, even in the absence of intent, your action and inaction equally generate an impact of some kind.
+
+The literal definition of "stand up" is constructed around the idea of making people stand to promote speed. I understand that the intent is to make a meeting short, but the mechanism is absurd and outlandish: you're literally relying on making people uncomfortable or even experience pain to promote better behavior. The use of such language reveals and indicates the presence of bias, which may be conscious or unconscious. The format is based on the prejudicial and erroneous assumption that everyone is equally capable of standing for 15 minutes. The metaphor constructs a physical barrier to participation, draws attention to physical differences, and obstructs the inclusion of those with mobility impairments.
+
+Even when standing isn't a barrier, physical differences such as height or stamina can create a power imbalance. Someone may suppress their voice when faced with the imposing effect someone towering over them may have. Another team member may have difficulty standing for long periods and may gradually disengage or hasten the meeting as the length of time draws on. The practice of standing can serve to amplify the dynamics between people and can potentially trigger anxiety. Fast-paced discussion can exclude those with hearing or auditory processing differences. The danger here is that the participation of those affected will be inhibited while the group at large trivializes this experience or may even remain unaware of it.
+
+Even when the requirement to stand is unenforced, the language itself reinforces that the expectation is for everyone to stand. There may be no overt stigmatization, yet those who sit during a "stand-up" are othered because their actions deviate from the artifice of standing. There's social pressure to maintain the status quo and conform. Those who must sit or choose to sit may be stood over and looked down upon, perhaps never with judgment but in a very literal sense. This also generates segregation, as there is now a separation of the group into those who sit and those who stand. It's good to make accommodations, but care must be taken that those adaptations don't generate division or that they aren't insufficient to counteract the underlying problems.
+
+Many organizations aim to foster an image that reflects a diverse environment. In order for diversity to truly flourish, it's important to endeavor to reach beyond this single aspect and work towards equity and inclusion as well. The World Health Organization defines equity as "the absence of avoidable or remediable differences among groups of people", and goes on to describe inequalities as "a failure to avoid or overcome inequalities that infringe on fairness."[^1] This underlines the importance of not only seeking equality but also the promotion of things that are fair, just, and promote a sense of belonging. The language of "stand up" is easily avoided to overcome even the pretense of inequality.
+
+## The Artifice is Ineffective and Can Be a Waste of Time
+
+My final argument is that a daily huddle may not produce the results you're hoping for. A time-blocked ritualistic meeting may incentivize rushing, sharing less, going with the flow, glossing over details, and concealing problems. Each team member may proceed on autopilot and recite their accomplishments and state of progress. Reporting that you have no blockers becomes merely an affordance, one that indicates it is now the next person's turn. For the sake of expediency and to avoid derailing the meetings' flow, no one takes the opportunity to address obstacles or challenges. In environments where psychological safety has been compromised, the team trends further towards embellishing and smoothing over their status report as a safety mechanism. Rigid adherence to the principles of a huddle can shift the focus away from the value that might be gained and towards the mechanical process. The huddle can become a perfunctory action of fulfilling the obligation of participation.
+
+At the other extreme, teams may be undisciplined and extend past the allotted time. The team's time is not prioritized or respected. When huddles become too large or combine too many dissimilar teams, the information covered becomes irrelevant, especially when work is unrelated. Conversations stray away from sharing key information toward long discussions and tangents. It is important that discussions, problem-solving, and communication occur within a team, but the daily huddle is an insufficient means of accomplishing this. Solving problems during a huddle is an antipattern. Healthy team communication occurs through many diverse sets of communication channels.
+
+As a result of the nature of remote and distributed teams, a scheduled daily huddle may also not be the best fit for a team. Depending on the physical distance between team members, optimal windows for scheduling meetings are restricted. For some team members, the huddle may occur midday and interrupt their workflow. For others, the huddle may still occur at the start of their day, and only they experience the full benefit of syncing up at the beginning of the day. Some team members may be forced to start their days earlier, disrupting their preferred schedule and imposing a disproportionate demand on their time. Their mornings become constricted, while the rest of the team doesn't experience the same stress. Team members may also find that the huddle occurs towards the end of their day, which restricts the amount of time available to collaborate on anything brought up during the meeting. These timezone differences obstruct the objective of providing a team the opportunity to sync up and share contextual information at the start of their day.
+
+## Conclusion
+
+What can we do when a meeting is no longer effective at achieving the desired objectives? It's important to evaluate what purpose the huddle serves. When it serves a purpose, is a static, synchronous huddle the most effective mechanism available to address the underlying needs? Some teams may find it better to perform the work of a huddle asynchronously through instant messaging channels. Everyone is given the opportunity to contribute at the start of their day, while the asynchronous format encourages more continuous, persistent, and free-flowing communication. It lessens the emphasis on a single time slot, and discussions can occur opportunistically as needs arise. 
+
+How can we address the problematic language? We can develop the habit of using more appropriate language. I've encountered daily meetings under many names: huddle, a daily, daily brief, team sync, daily scrum, and simply called a check-in. 
+
+How can we counteract dysfunctional huddles? Start first with fundamental practices for effective meetings. A meeting should be meaningful, have an agenda, state a purpose, outline clear objectives, respect time constraints, stay on task, exhibit a sense of decorum, and be capable of achieving something of value. If you can't accomplish all of these things, you're not prepared for a meeting.
+
+A single meeting may be insufficient to meet the needs of the team and achieve the desired objectives. You may need more than one meeting. Work may need to be done before convening for a meeting. A meeting may also ultimately be unnecessary. Foster and build more effective communication channels and information flows. Encourage and cultivate better collaboration, coordination, and cohesion amongst the team. Address any dysfunctions and antipatterns that may be present. Find creative ways to facilitate getting people to communicate and work together.
+
+[Photo by Yan Krukau from Pexels](https://www.pexels.com/photo/people-sitting-at-the-table-7794083/)
+
+[^1]: [Equity | World Health Organization](https://www.who.int/westernpacific/health-topics/detail/equity)

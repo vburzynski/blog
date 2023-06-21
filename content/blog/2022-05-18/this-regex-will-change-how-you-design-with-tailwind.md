@@ -28,6 +28,7 @@ Well I have a simple regular expression to aid you in swapping out all your old 
 ~~~regex
 (ext|decoration|bg|from|via|to|border|divide|outline|ring|ring-offset|shadow|accent|caret|fill|stroke){1}-(inherit|current|transparent|black|white|slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose|blueGray|coolGray|trueGray|warmGray|lightBlue){1}(-[0-9]{2,3})?
 ~~~
+
 *No warranty is provided or inferred. Use at your own peril. Void where prohibited by law. May cause nausea, confusion, or panic. If you experience any of these symptoms, please discontinue use of the regular expression.*
 
 The regex above should match against all of the default atomic color utilties that TailwindCSS provides and can be modified to more specifically match your use case. You may want to narrow down the list of color names or utility names to catch a specific subset of utilizations. Custom color names could be added to the list. You might also expand the regex to target specific variant modifiers.
