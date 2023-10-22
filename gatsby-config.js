@@ -4,6 +4,13 @@ module.exports = {
     siteUrl: 'https://www.valerieburzynski.com',
     description: 'Musings, writings, projects, and general knowledge',
   },
+  // Learn more at: https://gatsby.dev/graphql-typegen
+  // https://github.com/gatsbyjs/gatsby/discussions/35420#discussioncomment-3415403
+  // https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/#generateonbuild
+  // graphqlTypegen: {
+  //   generateOnBuild: true,
+  // },
+  graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
