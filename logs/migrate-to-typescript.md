@@ -11,4 +11,8 @@ npm i --save-dev @types/node @types/react @types/react-dom typescript
 
 # Rename JSX to TSX
 find ./src -name "*.jsx" -exec rename 's/\.jsx$/.tsx/' '{}' +
+
+# Generate tsconfig
+npx tsc --init
+# then modify it
 ```

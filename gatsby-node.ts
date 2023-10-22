@@ -1,6 +1,6 @@
 const path = require('path');
 const kebabCase = require('lodash/kebabCase');
-const blogPostTemplate = path.resolve('./src/templates/blog-post.jsx');
+const blogPostTemplate = path.resolve('./src/templates/blog-post.tsx');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
