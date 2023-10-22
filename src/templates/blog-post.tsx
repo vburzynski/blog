@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 import PageDivider from '../components/page-divider';
 import { Blog } from '../components';
 
-export default function PageTemplate({
+export default function BlogPost({
   data: {
     previous,
     next,
@@ -40,17 +40,17 @@ export default function PageTemplate({
   );
 }
 
-PageTemplate.propTypes = {
+BlogPost.propTypes = {
   data: PropTypes.any,
   children: PropTypes.node,
 };
 
-PageTemplate.defaultProps = {
+BlogPost.defaultProps = {
   children: null,
 };
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query BlogPost (
     $id: String!
     $previousPostId: String
     $nextPostId: String

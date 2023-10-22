@@ -2766,14 +2766,19 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
-type BlogPostBySlugQueryVariables = Exact<{
+type BlogPageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type BlogPageQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly allMarkdownRemark: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly excerpt: string | null, readonly fields: { readonly title: string | null, readonly slug: string | null } | null, readonly frontmatter: { readonly date: string | null, readonly category: string | null, readonly summary: string | null } | null }> } };
+
+type BlogPostQueryVariables = Exact<{
   id: Scalars['String'];
   previousPostId: InputMaybe<Scalars['String']>;
   nextPostId: InputMaybe<Scalars['String']>;
 }>;
 
 
-type BlogPostBySlugQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly markdownRemark: { readonly id: string, readonly excerpt: string | null, readonly html: string | null, readonly fields: { readonly title: string | null } | null, readonly frontmatter: { readonly date: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly summary: string | null, readonly imageAlt: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null, readonly previous: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null, readonly next: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null };
+type BlogPostQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly markdownRemark: { readonly id: string, readonly excerpt: string | null, readonly html: string | null, readonly fields: { readonly title: string | null } | null, readonly frontmatter: { readonly date: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly summary: string | null, readonly imageAlt: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null, readonly previous: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null, readonly next: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 

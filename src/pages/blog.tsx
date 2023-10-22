@@ -26,7 +26,7 @@ export function Head() {
 }
 
 export const pageQuery = graphql`
-  query {
+  query BlogPage {
     site {
       siteMetadata {
         title
