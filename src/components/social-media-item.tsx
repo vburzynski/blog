@@ -13,5 +13,4 @@ export default function SocialMediaItem({ href, title, iconClassName }) {
       </a>
     </li>
   );
-};
-
+}

@@ -33,7 +33,9 @@ function ExperienceCard() {
       <div className="p-4 space-y-3 rounded-lg shadow-2xl shadow-primary/50 bg-canvas">
         <h1 className="text-xl font-bold text-center sm:text-left">Experience</h1>
         <div className="border-b-2 opacity-25 border-primary" />
-        {workExperience.map(({ id, title, start, end }) => (
+        {workExperience.map(({
+          id, title, start, end,
+        }) => (
           <div key={id} className="text-center sm:text-left sm:flex sm:justify-between">
             <div className="text-lg font-medium">{ title }</div>
             <div className="text-sm font-medium text-primary-600">{`${start} to ${end}`}</div>
@@ -54,6 +56,6 @@ function ExperienceCard() {
       </div>
     </div>
   );
-};
+}
 
 export default ExperienceCard;
