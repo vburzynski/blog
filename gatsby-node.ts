@@ -25,10 +25,10 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, actions, getNod
   }
 };
 
-export const createPages = async ({ graphql, actions, reporter }) => {
+export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  const result = await graphql(`
+  const result = await graphql<Queries.GatsbyCreatePagesQuery>(`#graphql
     query GatsbyCreatePages {
       allMarkdownRemark(sort: {frontmatter: {date: ASC}}, limit: 1000) {
         nodes {
@@ -50,14 +50,14 @@ export const createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('Error loading MDX result', result.errors);
   }
 
-  const posts = result.data.allMarkdownRemark.nodes;
+  const posts = result.data?.allMarkdownRemark.nodes || [];
 
   posts.forEach((node, index) => {
     const previousPostId = index === 0 ? null : posts[index - 1].id;
     const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id;
 
     createPage({
-      path: `/blog/${node.fields.slug}`,
+      path: `/blog/${node.fields?.slug}`,
       component: blogPostTemplate,
       context: {
         id: node.id,
