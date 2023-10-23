@@ -75,3 +75,22 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
     });
   });
 };
+
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({ actions }) => {
+  actions.createTypes(`#graphql
+    type Frontmatter {
+      title: String!
+      date: String!
+      tags: [String!]!
+    }
+
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter!
+      fields: MarkdownRemarkFields!
+    }
+
+    type MarkdownRemarkFields {
+      slug: String!
+    }
+  `);
+};
