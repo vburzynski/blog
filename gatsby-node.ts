@@ -1,8 +1,16 @@
-import { GatsbyNode } from "gatsby";
+import { GatsbyNode, Node } from "gatsby";
 
 const path = require('path');
 const kebabCase = require('lodash/kebabCase');
 const blogPostTemplate = path.resolve('./src/templates/blog-post.tsx');
+
+type GatsbyMarkdownRemarkFrontmatter = {
+  readonly title: String;
+};
+
+type GatsbyMarkdownRemarkNode = Node & {
+  frontmatter: GatsbyMarkdownRemarkFrontmatter
+};
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -14,13 +22,13 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, actions, getNod
     createNodeField({
       node,
       name: 'slug',
-      value: node.frontmatter.slug || kebabFilename,
+      value: kebabFilename,
     });
 
     createNodeField({
       node,
       name: 'title',
-      value: node.frontmatter.title || fileNode?.name || 'Untitled',
+      value: (node as GatsbyMarkdownRemarkNode).frontmatter.title || fileNode?.name || 'Untitled',
     });
   }
 };
