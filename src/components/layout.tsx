@@ -1,12 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { ReactNode } from 'react';
 import Footer from './footer';
 import Header from './header';
 import svg from '../images/circuit-board.svg';
 
-function Layout({ section, children }) {
+export interface LayoutProps {
+  section: string;
+  children?: ReactNode;
+}
+
+function Layout({ section, children }: LayoutProps) {
   return (
-    <div className="bg-shadow font-sans leading-normal tracking-normal min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen font-sans leading-normal tracking-normal bg-shadow">
       <Header section={section} />
       <div className="grow pt-11 lg:pt-16" style={{ backgroundImage: `url(${svg})` }}>
         {children}
@@ -15,14 +19,5 @@ function Layout({ section, children }) {
     </div>
   );
 }
-
-Layout.propTypes = {
-  section: PropTypes.string.isRequired,
-  children: PropTypes.node,
-};
-
-Layout.defaultProps = {
-  children: null,
-};
 
 export default Layout;

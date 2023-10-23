@@ -1,7 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function NavigationItem({ title, href, isActive }) {
+export interface NavigationItemProps {
+  title: string;
+  href: string;
+  isActive?: boolean;
+}
+
+export default function NavigationItem({ title, href, isActive = false }: NavigationItemProps) {
   const customStyle = isActive
     ? 'text-gray-900 font-bold'
     : 'text-gray-600 hover:text-gray-900 hover:text-underline';
@@ -14,13 +19,3 @@ export default function NavigationItem({ title, href, isActive }) {
     </li>
   );
 }
-
-NavigationItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  isActive: PropTypes.bool,
-};
-
-NavigationItem.defaultProps = {
-  isActive: false,
-};
