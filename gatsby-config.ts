@@ -1,4 +1,6 @@
-module.exports = {
+import { GatsbyConfig } from "gatsby";
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: 'Valerie Burzynski',
     siteUrl: 'https://www.valerieburzynski.com',
@@ -206,3 +208,5 @@ module.exports = {
     },
   ],
 };
+
+export default config;

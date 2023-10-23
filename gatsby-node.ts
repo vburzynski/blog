@@ -1,13 +1,15 @@
+import { GatsbyNode } from "gatsby";
+
 const path = require('path');
 const kebabCase = require('lodash/kebabCase');
 const blogPostTemplate = path.resolve('./src/templates/blog-post.tsx');
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.parent && node.internal.type === 'MarkdownRemark') {
     const fileNode = getNode(node.parent);
-    const kebabFilename = kebabCase(fileNode.name);
+    const kebabFilename = kebabCase(fileNode?.name);
 
     createNodeField({
       node,
@@ -18,16 +20,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: 'title',
-      value: node.frontmatter.title || fileNode.name,
+      value: node.frontmatter.title || fileNode?.name || 'Untitled',
     });
   }
 };
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+export const createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   const result = await graphql(`
-    {
+    query GatsbyCreatePages {
       allMarkdownRemark(sort: {frontmatter: {date: ASC}}, limit: 1000) {
         nodes {
           id
