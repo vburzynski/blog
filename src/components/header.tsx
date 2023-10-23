@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { StaticImage } from 'gatsby-plugin-image';
 import Navigation from './navigation';
 
@@ -7,7 +6,11 @@ const progressStyle = {
   background: 'linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0)',
 };
 
-function Header({ section }) {
+export interface HeaderProps {
+  section: string;
+}
+
+function Header({ section }: HeaderProps) {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
 
   useEffect(() => {
@@ -17,8 +20,8 @@ function Header({ section }) {
       const windowHeight = scrollHeight - clientHeight;
       const scroll = (totalScroll / windowHeight) * 100;
 
-      const progress = document.querySelector('#progress');
-      progress.style.setProperty('--scroll', `${scroll}%`);
+      const progress: HTMLElement | null = document.querySelector('#progress');
+      progress?.style.setProperty('--scroll', `${scroll}%`);
       setIsHeaderFixed(window.scrollY > 10);
     };
 
@@ -36,10 +39,10 @@ function Header({ section }) {
     <nav id="header" className={`fixed w-full z-10 top-0 ${isHeaderFixed ? 'bg-canvas shadow' : 'bg-canvas'}`}>
       <div
         id="progress"
-        className="h-1 z-20 top-0 bg-green-500"
+        className="top-0 z-20 h-1 bg-green-500"
         style={progressStyle}
       />
-      <div className="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-1">
+      <div className="flex flex-wrap items-center justify-between w-full py-1 mx-auto mt-0 md:max-w-4xl">
         <div className="flex pl-4">
           <StaticImage
             className="w-10 h-10 mr-2"
@@ -51,7 +54,7 @@ function Header({ section }) {
             width={30}
             height={30}
           />
-          <a className="text-gray-900 no-underline hover:no-underline font-extrabold text-xl" href="/">
+          <a className="text-xl font-extrabold text-gray-900 no-underline hover:no-underline" href="/">
             Valerie Burzynski
           </a>
         </div>
@@ -60,9 +63,5 @@ function Header({ section }) {
     </nav>
   );
 }
-
-Header.propTypes = {
-  section: PropTypes.string.isRequired,
-};
 
 export default Header;
