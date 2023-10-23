@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { PageProps, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { DateTime } from 'luxon';
 import Layout from '../components/layout';
@@ -14,7 +14,7 @@ export default function BlogPost({
     markdownRemark: post,
   },
   children,
-}) {
+}: PageProps<Queries.BlogPostQuery>) {
   const published = DateTime.fromISO(post.frontmatter.date).toLocaleString(DateTime.DATE_HUGE);
   const image = getImage(post.frontmatter.image);
 

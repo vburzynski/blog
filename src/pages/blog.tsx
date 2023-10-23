@@ -1,9 +1,9 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { PageProps, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Blog from '../components/blog';
 
-function BlogPage({ data }) {
+function BlogPage({ data }: PageProps<Queries.BlogPageQuery>) {
   const posts = data.allMarkdownRemark.nodes;
 
   return (
