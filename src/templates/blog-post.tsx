@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { PageProps, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { DateTime } from 'luxon';
 import Layout from '../components/layout';
 import PageDivider from '../components/page-divider';
 import { Blog } from '../components';
 
-export default function PageTemplate({
+export default function BlogPost({
   data: {
     previous,
     next,
     markdownRemark: post,
   },
   children,
-}) {
+}: PageProps<Queries.BlogPostQuery>) {
   const published = DateTime.fromISO(post.frontmatter.date).toLocaleString(DateTime.DATE_HUGE);
   const image = getImage(post.frontmatter.image);
 
@@ -40,17 +40,17 @@ export default function PageTemplate({
   );
 }
 
-PageTemplate.propTypes = {
+BlogPost.propTypes = {
   data: PropTypes.any,
   children: PropTypes.node,
 };
 
-PageTemplate.defaultProps = {
+BlogPost.defaultProps = {
   children: null,
 };
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query BlogPost (
     $id: String!
     $previousPostId: String
     $nextPostId: String
@@ -98,4 +98,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import NavigationItem from './navigation-item';
 
 const sections = [
@@ -7,7 +6,12 @@ const sections = [
   { key: 'blog', title: 'Blog', href: '/blog' },
 ];
 
-export default function Navigation({ section, transparentBackground }) {
+export interface NavigationProps {
+  section: string;
+  transparentBackground?: boolean;
+}
+
+export default function Navigation({ section, transparentBackground = false }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -45,12 +49,3 @@ export default function Navigation({ section, transparentBackground }) {
     </>
   );
 }
-
-Navigation.propTypes = {
-  section: PropTypes.string.isRequired,
-  transparentBackground: PropTypes.bool,
-};
-
-Navigation.defaultProps = {
-  transparentBackground: false,
-};

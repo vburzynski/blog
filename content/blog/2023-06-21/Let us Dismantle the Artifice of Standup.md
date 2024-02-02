@@ -1,8 +1,8 @@
 ---
 title: Let Us Dismantle the Artifice of Standup
+date: 2023-06-21T08:33:38-05:00
 type: note
 classification: private
-date: 2023-06-21T08:33:38-05:00
 created: 2023-06-19T07:56:20-05:00
 updated: 2023-06-21T08:33:38-05:00
 image: ./pexels-yan-krukau-7794083.jpg

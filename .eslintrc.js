@@ -3,9 +3,7 @@ module.exports = {
     __PATH_PREFIX__: true,
   },
   extends: [
-    'eslint:recommended',
-    'airbnb',
-    'airbnb/hooks',
+    'react-app',
   ],
   env: {
     browser: true,
